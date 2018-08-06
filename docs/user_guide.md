@@ -1,0 +1,247 @@
+# User guide
+
+To start Waltz you should know the link to the application's entry point (e.g. https://fs-webtango.desy.de:8080/hzgxenvtest/).
+
+The application is secured with the login and pass. The credentials should be given by admin department.
+
+The application consists of 5 parts:
+
+1) Top tool bar (text filter, Devices tree and Device tree);
+
+2) Left panel with Devices tree (the root is the REST API server mane) and Device tree tab (with device name as a root) and a filter by text
+
+3) Main view with the 3 tabs: Dashboard, Scripting and Settings;
+
+4) Right panel (collapsed by default) - Device Control Panel;
+
+5) The bottom tool bar. 
+
+
+
+# Top toolbar
+On the left has logos that link to the corresponded websites. 
+On the right — the user name (by clicking on it you can access Setting tab) and logout button.
+
+
+# Bottom toolbar
+On the left — REST API request status (shows current request to the Tango REST Server). Can have the following states:
+* pending — the request is being sent but no response yet;
+* done — response from Tango REST Server have been successfully received;
+* failed — no response or it has an error.
+
+On the right bottom corner you will find 
+* user's actions log (![users_log_icon](images/users_log_icon.png)), 
+* application log (![errors_log_icon](images/errors_log_icon.png)) and 
+* “report an issue or bug” button - link to Waltz GitHub repository (![github_icon](images/github_icon.png)).
+
+
+
+
+# Left panel
+### Devices tree widget
+
+![rest_icon](images/rest_icon.png) — Tango REST API URL (the entry point, connected with Tango);
+
+![host_icon](images/host_icon.png) — Tango host (in this application it is a container of devices);
+
+![domain_icon](images/domain_icon.png) — domains, catalog of families within one tango host;
+
+![family_icon](images/family_icon.png) — family - catalog of devices;
+ 
+![device_icon](images/device_icon.png) — device.
+
+
+_Exercise_: 
+```
+Expand “development”, “sys” → “tg_test”.
+```
+
+### Filter
+Simple filter by text. 
+
+_Exercise_: 
+```
+Write “tg” in filter box.
+```
+
+### Context menu
+Right click on the device and you open a context menu.
+* Configure - opens a new tab with device configuration.
+* Monitor – opens a new tab with all the device's attributes. Scalar attributes will be listed in the table where you can plot them clicking on the plot icon (![plot_icon](images/plot_icon.png)). Each Spectrum and Image attribute will have its own tab. 
+* Delete – delete the device.
+
+_Exercise_: 
+```
+Go “sys” → “tg_test” → “my_test_device”.
+Choose “Monitor” from the context menu.
+```
+
+### Device monitor
+Here you can monitor devices' attributes, so it contains attributes' monitor view widget.
+The widget consists of Scalar plot, Scalar's data table, Spectrum and Image tabs and tool bar. 
+“My_test_device” is an alias to make the user fell more comfortable with the names. Now you can do it in Tango.
+
+**Scalar plot and Scalar's data table**
+
+_Exercise_: 
+```
+Click on the plot icon of “Double Scalar” attribute.
+Click on the plot icon of “short_scalar” attribute.
+To stop plotting “Double Scalar” attribute click on “x” in the data table.
+Open “double_spectrum_ro”.
+Open “short_image_ro”.
+```
+
+Attributes in  Scalar's data table may be highlighted depending on attribute quality set in Tango (“warning” or “alarm”). You can set these values using Tango Webapp (Devices tree widget → context menu on the device → Configure → Attributes config → Alarms). 
+
+**Tool bar**
+* Arrow – it shows status of refreshing of attributes' values;
+* Number – refresh rate of attributes' values (milliseconds);
+* Refresh button – to set a new value of  refresh rate;
+* Pause button – to pause refreshing.
+
+_Exercise_: 
+```
+Set 3000 and press refresh button. 
+```
+
+**Device configure**
+
+Opens device configuration widget. Here you can set device properties, attributes/commands polling, attributes configuration, logging.
+
+**Device widget**
+
+_Hint:_ Double click on the device and you can see the device structure and info.
+
+Here you can:
+* get info about the device;
+* can see device's attributes, commands and pipes;
+* use context menu on Attributes to add to the Dashboard (“Add to monitor”);
+* click on attribute or command or pipe to select it in Device Control Panel.
+
+_Note_: if you get the following error:
+
+> Reason: TangoProxyException Description: Failed to get proxy for tango://hzgxenvtest.desy.de:10000/development/camel/0:ProxyException in Failed to apply creation policy for proxy development/camel/0 PANIC: TangoApi_DEVICE_NOT_EXPORTED development/camel/0 Not Exported ! Connection(development/camel/0) ERR: TangoApi_CANNOT_IMPORT_DEVICE Cannot import development/camel/0 Connection.build_connection(development/camel/0)[Failed to apply creation policy for proxy development/camel/0:TangoApi_DEVICE_NOT_EXPORTED[development/camel/0 Not Exported !]] Origin: org.tango.web.server.TangoProxyPool.getProxy(TangoProxyPool.java:74)
+
+This means that Tango device is not exported. 
+
+_Exercise_: 
+```
+Select any attribute or command or pipe, 
+this also selects it in the Device control panel.
+```
+
+# Main view
+### Dashboard tab
+Same as Device monitor, except that attributes can be added here manually from different devices.
+You can add any attributes from any devices to the Dashboard using context menu on the corresponding attributes.
+
+_Exercise_: 
+```
+Open “my_test_device” in Device tree. 
+Choose “Double Scalar” in Attributes and add it to Dashboard using context menu. 
+To plot the scalar attribute click on the plot icon.
+Select attribute “short_image_ro” and add it to monitor using context menu. 
+Select “double_spectrum_ro” and add it to Dashboard using context menu. 
+Refresh the page
+```
+
+### Settings tab
+
+**Tango REST API URL**
+
+Url of REST API entry point. Usually the correct value is set during the deployment so normally you don't need to change it.
+
+**Tango hosts**
+
+List of user's Tango hosts. You can delete or add Tango hosts here. Template for Tango host: {host}:{port}.
+
+**Tango host info**
+
+Readonly information about host. Been automatically updated when click on the name of Tango host.  The values is loaded from the REST server.
+
+**Tango Server Wizard**
+
+You can add new device(s) here. 
+
+_Exercise_: 
+```
+Set 
+ServerName/Instance: TangoTest/test
+Class name: TangoTest
+Devices: test/tg_test/x;  test/tg_test/y
+```
+
+You have just added it to the database. The newly added devices are not running. You should start manually.
+
+**Device filters**
+
+In Devices tree panel you can only use text filter. Here you can apply more complicated filters. Define which devices will be available for the user. Moreover, several filters can be run simultaneously. Type each of them on new line and press “Apply filters” button.
+
+To return to the full devices' tree apply: */*/*
+
+_Exercise_: 
+```
+Set
+sys/tg_test/*
+tango/*/*
+press “Apply”
+```
+
+### Scripting tab
+You can write and execute javascripts here. “Scripts” block shows the names of javascript files you have. If you want to create a new javascript file, type the name of your future file in “Script name” field and your code in “Script code”. When click on run (![run_icon](images/run_icon.png)) button in the left bottom your script is automatically saved but you must fill Script name first!The result of the scritp is shown in “Script output” box. Of course, you can delete your script clicking on (![trash_icon](images/trash_icon.png)). To change the script – select needed one from the “Scripts” block.
+
+_Exercise_: 
+``` 
+Script name: sum
+Script code: return 2+2
+Press “ctrl+enter” to execute the script or click execute button
+```
+```
+Script name: readAttribute
+Script code:
+return PlatformContext.rest.fetchHost('localhost:10000')
+  .then(host => host.fetchDevice('sys/tg_test/1'))
+  .then(device => device.fetchAttr('double_scalar'))
+  .then(attr => attr.read())
+  .then(value => value.value)
+Press “ctrl+enter” to execute the script
+```
+# Right panel
+To work with the Device Controls Panel you should select the device first (either in Devices tree panel or Device Panel or click on a scalar attribute in the Dashboard). Name of the selected device is shown above  Attributes, Commands and Pipes tabs.
+
+All the attributes, commands and pipes refer to the selected device.
+
+### Attributes tab
+You can “Read”, “Plot”, “Plot.Hist” and “Write”. 
+Read – shows info about the attribute;
+Plot – read the value and plot it. No automatic updates. If you want automatic updates add attribute to monitor in Dashboard in Device Panel.
+Plot.Hist – plot historical values (usually 10). The number can be configured in Tango.
+Write – writes a new value in the attribute. If you change the value by writing a new one in the Device Controls Panel, this attribute will be automatically updated in all other tabs and panels.
+
+_Exercise_: 
+``` 
+Select “my_test_device”;
+select “double_scalar” attribute in the list of attributes;
+click “Plot”;
+in the text field next to “Write” button enter 100 and click “Write” button;
+click “Plot”;
+click “Plot.Hist”;
+```
+
+### Commands tab
+To execute the command, first choose the command you need, then type the input value. “Input” and “Output” boxes show what type of input value should be written and what output to expect.
+
+_Exercise_: 
+```  
+Select “DevDouble” enter 3.14 as input and press the “Execute” button
+```
+
+### Pipes tab
+It contains a text filter, “Read” and “Write” buttons and field where you can write value as [JSON](http://tango-rest-api.readthedocs.io/en/latest/device/#device-pipes).
+
+
+
+
+
+
