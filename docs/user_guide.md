@@ -17,8 +17,6 @@ The application consists of 5 parts:
 5) Right panel (collapsed by default) - Device Control Panel.
 
 
-
-
 ## Top toolbar
 On the left has logos that link to the corresponded websites. 
 On the right — the user name (by clicking on it you can access Setting tab) and logout button.
@@ -50,7 +48,9 @@ Delete “tg” in filter box.
 
 ### Devices tree widget
 
-Usually the devices tree widget has the following structure:
+Shows all devices you have. In this widget you can configure device, monitor all its attributes and delete it, also filter by text.
+
+Usually, the devices tree widget has the following structure:
 
 ![icon_rest](images/icon_rest.png) — Tango REST API URL (the entry point, connected with Tango);
 
@@ -75,23 +75,35 @@ Right click on the device and you open a __context menu__:
  * Delete – obviously, delete the device.
 
 
+##### Device configuration
+Right click on the device allows to open context menu and choose "Configure" menu item. It opens device configuration tab (new tab in the main view).
 
+Configuration tab contains properties, polling, events, attributes configuration and logging tabs which in their turn have their own tabs.
 
+For example, in the properties tab you can add, refresh, apply, delete property. Double click on the value and you can change it. 
 
+The rest tabs work the same way. 
 
-### Device monitor
 _Exercise_: 
 ```
 Go “sys” → “tg_test” → “my_test_device”.
-Choose “Monitor” from the context menu.
+Choose “Configure” from the context menu.
 ```
 
+##### Device monitor
 
 Here you can monitor devices' attributes, so it contains attributes' monitor view widget.
 The widget consists of Scalar plot, Scalar's data table, Spectrum and Image tabs and tool bar. 
 “My_test_device” is an alias to make the user fell more comfortable with the names. Now you can do it in Tango.
 
  Scalar attributes will be listed in the table where you can plot them clicking on the plot icon (![plot_icon](images/plot_icon.png)). Each Spectrum and Image attribute will have its own tab. 
+
+
+_Exercise_: 
+```
+Go “sys” → “tg_test” → “my_test_device”.
+Choose “Monitor” from the context menu.
+```
 
 
 **Scalar plot and Scalar's data table**
@@ -118,11 +130,12 @@ _Exercise_:
 Set 3000 and press refresh button. 
 ```
 
-**Device configure**
 
-Opens device configuration widget. Here you can set device properties, attributes/commands polling, attributes configuration, logging.
+
 
 **Device widget**
+
+Device Controls Panel has nothing inside at first, as we have to choose the device. 
 
 _Hint:_ Double click on the device and you can see the device structure and info.
 
