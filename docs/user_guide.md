@@ -1,3 +1,8 @@
+Before deepening into Waltz , please, note a list of very simple actions, but they really worth doing while using web-applications:
+* Redo last actions
+* Refresh the page
+* Refresh the page with cache drop (CTRL+F5) 
+
 # User guide
 
 To start Waltz you should know the link to the application's entry point (e.g. https://fs-webtango.desy.de:8080/hzgxenvtest/).
@@ -170,7 +175,7 @@ Select any attribute or command or pipe,
 this also selects it in the Device control panel.
 ```
 
-## Right panel - Device Controls Panel
+## Right panel - Device Control Panel
 It has 3 tabs (Attributes, Commands and Pipes) each of which has filter by text.
 
 To work with the Device Controls Panel you should select the device first (e.g. in Devices tree widget or in Device widget or click on an attribute in the Dashboard etc.). Name of the selected device is shown above Attributes, Commands and Pipes tabs.
@@ -212,8 +217,8 @@ It contains “Read” and “Write” buttons and field where you can write val
 ## Main view
 
 ### Dashboard tab
-Same as Device monitor, except that attributes can be added here manually from different devices.
-You can add any attributes from any devices to the Dashboard using context menu on the corresponding attributes.
+It has the same purpose as Device monitor, except that attributes can be added here manually from different devices.
+You can add any attributes from any devices to the Dashboard using context menu on the corresponding attributes in Device widget.
 
 _Exercise_: 
 ```
@@ -226,20 +231,21 @@ Refresh the page
 ```
 
 ### Settings tab
+This tab can also be reachable by clicking on the user name.
 
-**Tango REST API URL**
+##### Tango REST API URL
 
-Url of REST API entry point. Usually the correct value is set during the deployment so normally you don't need to change it.
+Url of REST API entry point. Usually the correct value is set during the deployment so usually you don't need to change it. But it is possible to add new REST API hosts (will rewrite the existing one).
 
-**Tango hosts**
+##### Tango hosts
 
 List of user's Tango hosts. You can delete or add Tango hosts here. Template for Tango host: {host}:{port}.
 
-**Tango host info**
+##### Tango host info
 
-Readonly information about host. Been automatically updated when click on the name of Tango host.  The values is loaded from the REST server.
+Readonly information about host. Been automatically updated when click on the name of Tango host. The values are loaded from the REST server.
 
-**Tango Server Wizard**
+##### Tango Server Wizard
 
 You can add new device(s) here. 
 
@@ -253,9 +259,11 @@ Devices: test/tg_test/x;  test/tg_test/y
 
 You have just added it to the database. The newly added devices are not running. You should start manually.
 
-**Device filters**
+##### Device filters
 
-In Devices tree panel you can only use text filter. Here you can apply more complicated filters. Define which devices will be available for the user. Moreover, several filters can be run simultaneously. Type each of them on new line and press “Apply filters” button.
+In fact, there are 3 filters in the application. But two of them (in Devices tree widget and in Device Control Panel) are text filters and the one you have here allows you to combine.
+
+You can apply more complicated filters, define which devices will be available. Moreover, several filters can be run simultaneously. Type each of them on new line and press “Apply filters” button.
 
 To return to the full devices' tree apply: */*/*
 
@@ -268,7 +276,17 @@ press “Apply”
 ```
 
 ### Scripting tab
-You can write and execute javascripts here. “Scripts” block shows the names of javascript files you have. If you want to create a new javascript file, type the name of your future file in “Script name” field and your code in “Script code”. When click on run (![run_icon](images/run_icon.png)) button in the left bottom your script is automatically saved but you must fill Script name first!The result of the scritp is shown in “Script output” box. Of course, you can delete your script clicking on (![trash_icon](images/trash_icon.png)). To change the script – select needed one from the “Scripts” block.
+You can write and execute javascripts here. 
+
+_“Scripts” block_ shows the names of javascript files you have. 
+
+If you want to create a new javascript file, type the name of your future file in _“Script name” field_ and your code in _“Script code”_. When click on run button (![icon_run](images/icon_run.png)) in the left bottom your script is automatically saved but you must fill _Script name_ first!
+
+The result of the scritp is shown in _“Script output”_ box. 
+
+Of course, you can delete your script clicking on (![icon_trash](images/icon_trash.png)). 
+
+To change the script – select the needed one from the “Scripts” block.
 
 _Exercise_: 
 ``` 
