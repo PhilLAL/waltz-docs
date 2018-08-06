@@ -77,7 +77,7 @@ Right click on the device and you open a __context menu__:
  * Delete – obviously, delete the device.
 
 
-##### Device configuration
+#### Device configuration
 Right click on the device allows to open context menu and choose "Configure" menu item. It opens device configuration tab (new tab in the main view) with the name of the configurated device.
 
 Configuration tab contains properties, polling, events, attributes configuration and logging tabs which in their turn have their own tabs.
@@ -94,7 +94,7 @@ Go “sys” → “tg_test” → “my_test_device”.
 Choose “Configure” from the context menu.
 ```
 
-##### Device monitor
+#### Device monitor
 
 Right click on the "Monitor" in the device context menu and the monitor tab opens in the main view. The opened tab has the name of the monitored device.
 
@@ -120,7 +120,7 @@ _Tool bar_ has the following controls:
 * Refresh button – to set a new value of  refresh rate;
 * Pause button – to pause refreshing.
 
-__NOTE__ Values are updated only if visible
+__NOTE__ Values are updated only if visible.
 
 _Exercise_: 
 ```
@@ -146,7 +146,7 @@ Set 3000 and press refresh button.
 
 As soon as the device in the Devises' tree is chosen the device widget is updated. 
  
-_Hint:_ Double click on the device and you can see the device structure and info.
+_Hint:_ Double click on the device in the Devices tree and you can see the device structure and info.
 
 Here you can:
 * get info about the device;
@@ -154,11 +154,15 @@ Here you can:
 * use context menu on Attributes to add to the Dashboard (“Add to monitor”);
 * click on attribute or command or pipe to select it in Device Control Panel.
 
-_Note_: if you get the following error:
+__NOTE__ if you get the following error, this means that Tango device is not exported:
 
 > Reason: TangoProxyException Description: Failed to get proxy for tango://hzgxenvtest.desy.de:10000/development/camel/0:ProxyException in Failed to apply creation policy for proxy development/camel/0 PANIC: TangoApi_DEVICE_NOT_EXPORTED development/camel/0 Not Exported ! Connection(development/camel/0) ERR: TangoApi_CANNOT_IMPORT_DEVICE Cannot import development/camel/0 Connection.build_connection(development/camel/0)[Failed to apply creation policy for proxy development/camel/0:TangoApi_DEVICE_NOT_EXPORTED[development/camel/0 Not Exported !]] Origin: org.tango.web.server.TangoProxyPool.getProxy(TangoProxyPool.java:74)
+ 
 
-This means that Tango device is not exported. 
+Clicking on “Add to monitor” in the context menu of the attribute, you add it to the dashboard tab in the main view. The dashboard has the same view widget structure as the "monitor tab".
+
+__NOTE__ The difference between “Dashboard” and “Monitor tab” is that you can add any attribute of ANY device to the Dashboard, whereas in the “Monitor tab” you see all the attributes of one device.
+
 
 _Exercise_: 
 ```
@@ -166,7 +170,47 @@ Select any attribute or command or pipe,
 this also selects it in the Device control panel.
 ```
 
-# Main view
+## Right panel - Device Controls Panel
+It has 3 tabs (Attributes, Commands and Pipes) each of which has filter by text.
+
+To work with the Device Controls Panel you should select the device first (e.g. in Devices tree widget or in Device widget or click on an attribute in the Dashboard etc.). Name of the selected device is shown above Attributes, Commands and Pipes tabs.
+
+All the attributes, commands and pipes refer to the selected device.
+
+### Attributes tab
+You can “Read”, “Plot”, “Plot.Hist” and “Write”. 
+* Read – shows info about the attribute;
+* Plot – reads the value and plot it. No automatic updates. If you want automatic updates, add attribute to monitor to the Dashboard in Device widget.
+* Plot.Hist – plots historical values (usually 10). The number can be set in "Configuration tab" of device.
+* Write – writes a new value in the attribute. If you change the value by writing a new one in the Device Controls Panel, this attribute will be automatically updated in all other tabs and panels.
+
+_Exercise_: 
+``` 
+Select “my_test_device”;
+select “double_scalar” attribute in the list of attributes;
+click “Plot”;
+in the text field next to “Write” button enter 100 and click “Write” button;
+click “Plot”;
+click “Plot.Hist”;
+```
+
+### Commands tab
+To execute the command, first choose the command you need, then type the input value. 
+
+“Input” and “Output” boxes show what type of input value should be written and what output to expect.
+
+_Exercise_: 
+```  
+Select “DevDouble” enter 3.14 as input and press the “Execute” button
+```
+
+### Pipes tab
+It contains “Read” and “Write” buttons and field where you can write value as [JSON](http://tango-rest-api.readthedocs.io/en/latest/device/#device-pipes).
+
+
+
+## Main view
+
 ### Dashboard tab
 Same as Device monitor, except that attributes can be added here manually from different devices.
 You can add any attributes from any devices to the Dashboard using context menu on the corresponding attributes.
@@ -242,38 +286,6 @@ return PlatformContext.rest.fetchHost('localhost:10000')
   .then(value => value.value)
 Press “ctrl+enter” to execute the script
 ```
-# Right panel
-To work with the Device Controls Panel you should select the device first (either in Devices tree panel or Device Panel or click on a scalar attribute in the Dashboard). Name of the selected device is shown above  Attributes, Commands and Pipes tabs.
-
-All the attributes, commands and pipes refer to the selected device.
-
-### Attributes tab
-You can “Read”, “Plot”, “Plot.Hist” and “Write”. 
-Read – shows info about the attribute;
-Plot – read the value and plot it. No automatic updates. If you want automatic updates add attribute to monitor in Dashboard in Device Panel.
-Plot.Hist – plot historical values (usually 10). The number can be configured in Tango.
-Write – writes a new value in the attribute. If you change the value by writing a new one in the Device Controls Panel, this attribute will be automatically updated in all other tabs and panels.
-
-_Exercise_: 
-``` 
-Select “my_test_device”;
-select “double_scalar” attribute in the list of attributes;
-click “Plot”;
-in the text field next to “Write” button enter 100 and click “Write” button;
-click “Plot”;
-click “Plot.Hist”;
-```
-
-### Commands tab
-To execute the command, first choose the command you need, then type the input value. “Input” and “Output” boxes show what type of input value should be written and what output to expect.
-
-_Exercise_: 
-```  
-Select “DevDouble” enter 3.14 as input and press the “Execute” button
-```
-
-### Pipes tab
-It contains a text filter, “Read” and “Write” buttons and field where you can write value as [JSON](http://tango-rest-api.readthedocs.io/en/latest/device/#device-pipes).
 
 
 
