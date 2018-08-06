@@ -8,78 +8,91 @@ The application consists of 5 parts:
 
 1) Top tool bar (text filter, Devices tree and Device tree);
 
-2) Left panel with Devices tree (the root is the REST API server mane) and Device tree tab (with device name as a root) and a filter by text
+2) The bottom tool bar; 
 
-3) Main view with the 3 tabs: Dashboard, Scripting and Settings;
+3) Left panel with Devices tree (the root is the REST API server mane), Device tree tab (with device name as a root) and a filter by text;
 
-4) Right panel (collapsed by default) - Device Control Panel;
+4) Main view with the 3 tabs: Dashboard, Scripting and Settings;
 
-5) The bottom tool bar. 
+5) Right panel (collapsed by default) - Device Control Panel.
 
 
 
-# Top toolbar
+
+## Top toolbar
 On the left has logos that link to the corresponded websites. 
 On the right — the user name (by clicking on it you can access Setting tab) and logout button.
 
 
-# Bottom toolbar
+## Bottom toolbar
 On the left — REST API request status (shows current request to the Tango REST Server). Can have the following states:
 * pending — the request is being sent but no response yet;
 * done — response from Tango REST Server have been successfully received;
 * failed — no response or it has an error.
 
 On the right bottom corner you will find 
-* user's actions log (![users_log_icon](images/users_log_icon.png)), 
-* application log (![errors_log_icon](images/errors_log_icon.png)) and 
-* “report an issue or bug” button - link to Waltz GitHub repository (![github_icon](images/github_icon.png)).
+* user's actions log (![log_icon_users](images/log_icon_users.png)), 
+* application log (![log_icon_errors](images/log_icon_errors.png)) and 
+* “report an issue or bug” button - link to Waltz GitHub repository (![icon_github](images/icon_github.png)).
 
 
+## Left panel
+Consists of 3 parts: Filter by text, Devices Controls Widget and Device Controls Widget.
 
+### Left panel filter
+Simple filter by text. 
 
-# Left panel
+_Exercise_: 
+```
+Write “tg” in filter box.
+Delete “tg” in filter box.
+```
+
 ### Devices tree widget
 
-![rest_icon](images/rest_icon.png) — Tango REST API URL (the entry point, connected with Tango);
+Usually the devices tree widget has the following structure:
 
-![host_icon](images/host_icon.png) — Tango host (in this application it is a container of devices);
+![icon_rest](images/icon_rest.png) — Tango REST API URL (the entry point, connected with Tango);
 
-![domain_icon](images/domain_icon.png) — domains, catalog of families within one tango host;
+![icon_host](images/icon_host.png) — Tango host (in this application it is a container of devices);
 
-![family_icon](images/family_icon.png) — family - catalog of devices;
+![icon_domain](images/icon_domain.png) — domains, catalog of families within one tango host;
+
+![icon_family](images/icon_family.png) — family - catalog of devices;
  
-![device_icon](images/device_icon.png) — device.
-
+![icon_device](images/icon_device.png) — device.
 
 _Exercise_: 
 ```
 Expand “development”, “sys” → “tg_test”.
 ```
 
-### Filter
-Simple filter by text. 
+If you click on the device, all the commands, attributes and pipes related to this device will be show in the Control Panel on the right. The Device Controls Widget will be also updated.
 
-_Exercise_: 
-```
-Write “tg” in filter box.
-```
+Right click on the device and you open a __context menu__:
+ * Configure - opens a new tab with device configuration.
+ * Monitor – opens a new tab with all the device's attributes.
+ * Delete – obviously, delete the device.
 
-### Context menu
-Right click on the device and you open a context menu.
-* Configure - opens a new tab with device configuration.
-* Monitor – opens a new tab with all the device's attributes. Scalar attributes will be listed in the table where you can plot them clicking on the plot icon (![plot_icon](images/plot_icon.png)). Each Spectrum and Image attribute will have its own tab. 
-* Delete – delete the device.
 
+
+
+
+
+### Device monitor
 _Exercise_: 
 ```
 Go “sys” → “tg_test” → “my_test_device”.
 Choose “Monitor” from the context menu.
 ```
 
-### Device monitor
+
 Here you can monitor devices' attributes, so it contains attributes' monitor view widget.
 The widget consists of Scalar plot, Scalar's data table, Spectrum and Image tabs and tool bar. 
 “My_test_device” is an alias to make the user fell more comfortable with the names. Now you can do it in Tango.
+
+ Scalar attributes will be listed in the table where you can plot them clicking on the plot icon (![plot_icon](images/plot_icon.png)). Each Spectrum and Image attribute will have its own tab. 
+
 
 **Scalar plot and Scalar's data table**
 
