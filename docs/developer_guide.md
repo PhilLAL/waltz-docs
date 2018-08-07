@@ -47,10 +47,35 @@ So putting it all together, we get the following diagram:
 
 # Waltz platform
 
-
-
-
 ## mTangoREST.server
+[mTangoREST.server](https://github.com/ingvord/mtangorest.server) - is a Java implementation of a Tango Controls REST API specification. If you need C++ version, please, visit [RestDS](http://tangodevel.jinr.ru/git/tango/web/RestDS) page.
+
+mTangoREST.server has [two distributions](https://github.com/Ingvord/mtangorest.server/releases): .jar and .zip
+
+The difference is shown in the following diagram:
+![mTangoREST.server_jar-zip](images/mTangoREST.server_jar-zip.png)
+
+**.jar**
+* For development/small production deployment
+* Standalone Tango device 
+* Integration with standard Tango tools (Astor)
+* Using launch script
+* Dokerized
+
+**.war**
+* For production deployment:
+    - Allows fine Tomcat tuning
+    - High load (1K-10K users)
+    - Standard enterprise infrastructure
+* Embedded Tango device 
+    - Configuration in WEB-INF/web.xml
+
+
+Pipeline of the mTangoREST.server request can be presented like this:
+![mTangoREST.server_request_pipeline](images/mTangoREST.server_request_pipeline.png)
+Where * org.tango.web.server.filters; 
+** org.tango.web.server.providers;
+*** org.tango.web.server.resolvers, org.tango.web.server.interceptors.
 
 ## Waltz
 
