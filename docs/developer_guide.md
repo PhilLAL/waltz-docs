@@ -73,9 +73,21 @@ The difference is shown in the following diagram:
 
 Pipeline of the mTangoREST.server request can be presented like this:
 ![mTangoREST.server_request_pipeline](images/mTangoREST.server_request_pipeline.png)
-Where * org.tango.web.server.filters; 
+Where 
+* org.tango.web.server.filters; 
+
 ** org.tango.web.server.providers;
+
 *** org.tango.web.server.resolvers, org.tango.web.server.interceptors.
+
+Tango JAX-RS resources - Tango entities (aka device, attribute, commands etc) in mTangoREST.server.
+The examples of code structure and Device class are below:
+![mTangoREST.server_JAX-RS_resources](images/mTangoREST.server_JAX-RS_resources.png)
+
+If you debug Device.java class, you will see 
+![mTangoREST.server_device_class_debug](images/mTangoREST.server_device_class_debug.png)
+
+
 
 ## Waltz
 
