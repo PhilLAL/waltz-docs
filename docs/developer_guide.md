@@ -85,7 +85,7 @@ Tango JAX-RS resources - Tango entities (aka device, attribute, commands etc) in
 The examples of code structure and Device class are below:
 ![mTangoREST.server_JAX-RS_resources](images/mTangoREST.server_JAX-RS_resources.png)
 
-If you debug Device.java class, you will see 
+If you debug Device.java class, you will see that URL maps onto the method via annotation in the class:
 ![mTangoREST.server_device_class_debug](images/mTangoREST.server_device_class_debug.png)
 
 Deployment should be done by system administrators. Below you can see how it was done in ESRF and DESY.
