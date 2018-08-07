@@ -45,7 +45,8 @@ So putting it all together, we get the following diagram:
 ![devGuide_intro_putting_all_together](images/devGuide_intro_putting_all_together.png)
 
 
-# Waltz platform
+# Waltz
+Frankly speaking, as a frontend developer you don't need to know server part. Here we would like to give you a short overview to let you know how it is organized.
 
 ## mTangoREST.server
 [mTangoREST.server](https://github.com/ingvord/mtangorest.server) - is a Java implementation of a Tango Controls REST API specification. If you need C++ version, please, visit [RestDS](http://tangodevel.jinr.ru/git/tango/web/RestDS) page.
@@ -86,6 +87,11 @@ The examples of code structure and Device class are below:
 
 If you debug Device.java class, you will see 
 ![mTangoREST.server_device_class_debug](images/mTangoREST.server_device_class_debug.png)
+
+Deployment should be done by system administrators. Below you can see how it was done in ESRF and DESY.
+![deployment_DESY](images/deployment_DESY.png)
+![deployment_ESRF](images/deployment_ESRF.png)
+
 
 
 
