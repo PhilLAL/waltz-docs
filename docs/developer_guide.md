@@ -89,9 +89,8 @@ If you debug Device.java class, you will see
 ![mTangoREST.server_device_class_debug](images/mTangoREST.server_device_class_debug.png)
 
 Deployment should be done by system administrators. Below you can see how it was done in ESRF and DESY.
-![deployment_DESY](images/deployment_DESY.png)
 ![deployment_ESRF](images/deployment_ESRF.png)
-
+![deployment_DESY](images/deployment_DESY.png)
 
 
 
