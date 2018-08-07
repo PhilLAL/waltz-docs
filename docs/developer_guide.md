@@ -45,4 +45,12 @@ So putting it all together, we get the following diagram:
 ![devGuide_intro_putting_all_together](images/devGuide_intro_putting_all_together.png)
 
 
-# Waltz
+# Waltz platform
+
+
+
+
+## mTangoREST.server
+
+## Waltz
+
