@@ -46,7 +46,16 @@ So putting it all together, we get the following diagram:
 
 
 # Waltz
+
+
+Waltz is distributed in two versions: .jar and .war.
+
+A high level overview is presented in C&C diagrams.
+![Waltz_jar_distribution](images/Waltz_jar_distribution.png)
+![Waltz_war_distribution](images/Waltz_war_distribution.png)
+
 Frankly speaking, as a frontend developer you don't need to know server part. Here we would like to give you a short overview to let you know how it is organized.
+
 
 ## mTangoREST.server
 [mTangoREST.server](https://github.com/ingvord/mtangorest.server) - is a Java implementation of a Tango Controls REST API specification. If you need C++ version, please, visit [RestDS](http://tangodevel.jinr.ru/git/tango/web/RestDS) page.
@@ -95,4 +104,7 @@ Deployment should be done by system administrators. Below you can see how it was
 
 
 ## Waltz
+Waltz module diagram:
+![Waltz_module_diagram](images/Waltz_module_diagram.png)
+
 
