@@ -1,4 +1,6 @@
-# Slides
+# Installation and tutorial
+
+## Slides
 
 1. [Introduction](https://www.slideshare.net/secret/bGqura3owiyMtn)
 
