@@ -105,8 +105,31 @@ Deployment should be done by system administrators. Below you can see how it was
 
 ## Waltz
 Waltz is a bunch of jmvc applications, backend and widgets. 
-Waltz_high_level_module_diagram
 ![Waltz_high_level_module_diagram](images/Waltz_high_level_module_diagram.png)
+
+JMVC application means having the following:
+![JMVC](images/JMVC.png)
+
+* documentation auto generation
+* test console where you can run Unit tests. You can test widget(s) separately.
+* provide packaging
+![Waltz_packaging](images/Waltz_packaging.png)
+* OpenAjax for loose coupling
+* Platform API
+![Waltz_platform_API](images/Waltz_platform_API.png)
+
+
+
+![Waltz_data_binding](images/Waltz_data_binding.png)
+
+
+
+
+
+
+
+
+
 
 Waltz module diagram:
 ![Waltz_module_diagram](images/Waltz_module_diagram.png)
