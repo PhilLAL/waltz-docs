@@ -104,6 +104,10 @@ Deployment should be done by system administrators. Below you can see how it was
 
 
 ## Waltz
+Waltz is a bunch of jmvc applications, backend and widgets. 
+Waltz_high_level_module_diagram
+![Waltz_high_level_module_diagram](images/Waltz_high_level_module_diagram.png)
+
 Waltz module diagram:
 ![Waltz_module_diagram](images/Waltz_module_diagram.png)
 
