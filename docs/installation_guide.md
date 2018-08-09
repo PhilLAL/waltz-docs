@@ -111,7 +111,7 @@ Add a new local Tomcat run configuration:
 
 ![](images/installation_ide_1.png)
 
-Setup a new Tomcat application server - just add Apache Tomcat base folder (the one you extracted in [I. mTangoREST.server installation guide](https://github.com/tango-controls/tango-webapp/wiki/TangoWebapp-Workshop@SOLARIS#i-mtangorestserver-installation-guide))
+Setup a new Tomcat application server - just add Apache Tomcat base folder (the one you extracted in _I. mTangoREST.server installation guide_)
 
 ![](images/installation_ide_2.png)
 
@@ -643,7 +643,7 @@ Test application for design responsiveness using dev tools
 
 [1] [Exploring JS](http://exploringjs.com/)
 
-[2] [Waltz platform API references](https://tango-controls.github.io/tango-webapp/)
+[2] [Waltz platform API references](https://tango-controls.github.io/waltz/)
 
 [3] [webix documentation](https://docs.webix.com/desktop__overview.html)
 
