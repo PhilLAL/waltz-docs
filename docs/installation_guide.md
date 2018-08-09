@@ -78,7 +78,7 @@ Get an error because have to connect to Tango Controls.
 
 5. Set a valid Tango Host. In Waltz go to _Setting_ tab (1) -> _Tango hosts_ box -> put __your__ Tango host -> press "+" (2)
 
-![add tango host](images/client_15.png)
+![installation_add tango host](images/installation_client_15.png)
 
 # III. IDE Setup
 
@@ -103,35 +103,35 @@ This will create **tango-webapp** folder in the current folder.
 
 Add a new artifact "+" -> _Web Application: Exploded_ and add **tango-webapp** as _Directory content_ to the artifact:
 
-![](images/ide_3.png)
+![](images/installation_ide_3.png)
 
 4. Once new project has been created let's setup Apache Tomcat. Select _Run_ -> _Edit configurations..._
 
 Add a new local Tomcat run configuration:
 
-![](images/ide_1.png)
+![](images/installation_ide_1.png)
 
 Setup a new Tomcat application server - just add Apache Tomcat base folder (the one you extracted in [I. mTangoREST.server installation guide](https://github.com/tango-controls/tango-webapp/wiki/TangoWebapp-Workshop@SOLARIS#i-mtangorestserver-installation-guide))
 
-![](images/ide_2.png)
+![](images/installation_ide_2.png)
 
 Next you need to add TangoWebapp artifact to Tomcat: open _Deployment_ tab and add artifact:
 
-![](images/ide_4.png)
+![](images/installation_ide_4.png)
 
 Set context - this is what defines URL at which Waltz will be accessible e.g. `http://localhost:8080/WaltzDev`:
 
-![](images/ide_6.png)
+![](images/installation_ide_6.png)
 
 Finally switch back to _Server_ tab and choose _Update classes and resources_ on _Frame deactivation_:
 
-![](images/ide_5.png)
+![](images/installation_ide_5.png)
 
 the later will allow source update on the fly i.e. changes to _.js_ files will be fetched by Tomcat automatically once you switch to the browser.
 
 5. Finally set JavaScript language flavour to Nashorn: _File_ -> _Settings..._ -> put _javascript_ into search box -> _Languages & Frameworks_ -> _JavaScript_ -> select _Nashorn JS_ in the drop-down list
 
-![](images/ide_16.png)
+![](images/installation_ide_16.png)
 
 Now IntelliJ IDEA is ready for development.
 
@@ -263,7 +263,7 @@ _setup.js_ is required due to limitation of Nashorn (see upcoming presentation)
 
 5. Run Tomcat in IntelliJ IDEA (if not yet started and be sure REST is started) and check the result:
 
-![](images/ide_7.png)
+![](images/installation_ide_7.png)
 
 **IMPORTANT**: run Tomcat from IntelliJ IDEA, **NOT** from Terminal. Otherwise Tomcat won't update sources and may not deploy proper application at all.
 
@@ -324,7 +324,7 @@ Here we use existing _ImageView_ from Waltz platform. In the next step we will a
 
 3. Check the result. Switch to Firefox and refresh the page (`F5`):
 
-![](images/ide_8.png)
+![](images/installation_ide_8.png)
 
 ### Further improvements
 
@@ -390,7 +390,7 @@ Usage of _TangoWebappPlatform.mixin.Runnable_ will handle a number of situations
 
 3. Switch to Firefox and refresh the page (`F5`). Now open dev tools (`F12`) and switch to the _Network tab_:
 
-![](images/ide_9.png)
+![](images/installation_ide_9.png)
 
 You will notice a bunch of requests every second. If you switch to _Settings_ tab requests will cease to appear. This is because _TangoWebappPlatform.mixin.Runnable_ implements this functionality.
 
@@ -398,7 +398,7 @@ And of course it is a good practice to extract common functionality and re-use i
 
 4. Using dev tools debugger. Very important feature and skill - to debug the code. Lets have a look what we get from the server when reading our attribute. Switch to _Debugger_ tab look for _my_dashboard.js_, put a break point and switch back to _My Dashboard_ tab in Waltz:
 
-![](images/ide_10.png)
+![](images/installation_ide_10.png)
 
 ### Add functional test.
 
@@ -466,7 +466,7 @@ include.functional_tests(
 
 4. Switch to Firefox and refresh the page (`F5`). A test console will popup. Wait until all tests are loaded, switch to _Functional_ tab, scroll to _my_dashboard_ test and run it:
 
-![](images/ide_17.png)
+![](images/installation_ide_17.png)
 
 The final version of the code for this exercise is available [here](https://github.com/tango-controls/tango-webapp/pull/140)
 
@@ -537,7 +537,7 @@ buildUI: function(platform){
 
 **NOTE** `my_app` in the link
 
-![](images/ide_12.png)
+![](images/installation_ide_12.png)
 
 ### Packaging application
 
@@ -597,11 +597,11 @@ $>
 
 1. Go to the webix skin builder [link](https://webix.com/skin-builder/):
 
-![](images/ide_13.png)
+![](images/installation_ide_13.png)
 
 2. Play with different style themes. We will choose _material_ and adjust background color/view color and download the resulting theme:
 
-![](images/ide_14.png)
+![](images/installation_ide_14.png)
 
 3. Unpack downloaded archive into stylesheets folder and enable the new skin in _index.html_ (apps/my_app folder) adding:
 
@@ -619,7 +619,7 @@ $>
 
 4. Check the result:
 
-![](images/ide_15.png)
+![](images/installation_ide_15.png)
 
 **Read more**
 
