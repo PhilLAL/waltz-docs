@@ -111,6 +111,8 @@ Deployment should be done by system administrators. Below you can see how it was
 Waltz is a bunch of jmvc applications, backend and widgets. 
 ![Waltz_high_level_module_diagram](images/Waltz_high_level_module_diagram.png)
 
+Project structure is a  JS-MVC one. Description is in [javascriptmvc-1.5.x](https://github.com/jmvc-15x/javascriptmvc-1.5.x) GitHub repository.
+
 JMVC application means having the following:
 ![JMVC](images/JMVC.png)
 
