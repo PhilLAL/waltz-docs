@@ -157,8 +157,50 @@ Waltz_code_platformAPI_mixins.png
 Waltz_code_platformAPI_StatefulMixin.png
 
 
+### Subscription
 
+platform_context.create
+platform_context.destroy
+platform_context.set_rest
+platform_context.set_user_context
 
+tango_webapp.tango_host_loaded
 
+tango_webapp.rest_send
+tango_webapp.rest_failure
+tango_webapp.rest_success
+
+tango_webapp.device_
+tango_webapp.device_loaded
+tango_webapp.device_configure
+tango_webapp.device_delete
+tango_webapp.device_view
+tango_webapp.device_view.update_attr_config
+
+tango_webapp.attr_
+tango_webapp.attr_add_to_monitor
+
+tango_webapp.item_selected
+
+tango_webapp.database_loaded
+
+user_action.log
+
+platform_api.ui.initialized
+
+platform.user_logout
+
+user_context.create.as_existing
+user_context.destroy
+
+user_context_controller.found
+user_context_controller.destroy
+user_context_controller.update
+
+user_context_controller.add_tango_host
+user_context_controller.delete_tango_host
+
+tango_rest_api.is_alive
+tango_rest_api.is_not_alive
 
 
