@@ -54,6 +54,10 @@ A high level overview is presented in C&C diagrams.
 ![Waltz_jar_distribution](images/Waltz_jar_distribution.png)
 ![Waltz_war_distribution](images/Waltz_war_distribution.png)
 
+Waltz itself consists of 2 parts: platform and end user UI. If you need, you can extent platform part, e.g.  at the moment Waltz has Tango Controls data source, but it can be extended to EPICS.
+
+![Waltz_extention](images/Waltz_extention.png)
+
 Frankly speaking, as a frontend developer you don't need to know server part. Here we would like to give you a short overview to let you know how it is organized.
 
 
