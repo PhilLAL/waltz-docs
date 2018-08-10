@@ -1,0 +1,10 @@
+site_name: Waltz documentation
+repo_url: https://github.com/tango-controls/waltz
+
+theme: readthedocs
+
+pages:
+- Home: index.md
+- User Guide: user_guide.md
+- Developer Guide: developer_guide.md
+- Installation: installation_guide.md
