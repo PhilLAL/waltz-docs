@@ -122,20 +122,41 @@ JMVC application means having the following:
 * Platform API
 ![Waltz_platform_API](images/Waltz_platform_API.png)
 
+Waltz module diagram:
+![Waltz_module_diagram](images/Waltz_module_diagram.png)
 
 
 ![Waltz_data_binding](images/Waltz_data_binding.png)
 
 
+Waltz_code_platformAPI_UIBuilder.png
+Waltz_code_platformAPI_UIBuilder1.png
+Waltz_code_platformAPI_UserContext.png
+Waltz_code_platformAPI_UserContext1.png
+Waltz_code_subscribe.png
+Waltz_code_TangoRequestAPI.png
+Waltz_code_tests.png
+Waltz_code_webixProtoUI.png
+Waltz_code_webixProtoUI+composition.png
+Waltz_extention.png
+Waltz_high_level_module_diagram.png
+Waltz_jar_distribution.png
+Waltz_module_diagram.png
+Waltz_packaging.png
+Waltz_packaging1.png
+Waltz_TC.png
+Waltz_Travis.png
+Waltz_war_distribution.png
+Waltz_code_data_binding.png
+Waltz_code_extend.png
+Waltz_code_include.png
+Waltz_code_JSDoc.png
+Waltz_code_platformAPI_mixins.png
+Waltz_code_platformAPI_StatefulMixin.png
 
 
 
 
 
-
-
-
-Waltz module diagram:
-![Waltz_module_diagram](images/Waltz_module_diagram.png)
 
 
