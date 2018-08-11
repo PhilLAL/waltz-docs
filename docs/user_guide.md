@@ -80,7 +80,7 @@ Expand “development”, “sys” → “tg_test”.
 
 You can use aliases instead of members to fell more comfortable with the names. 
 
-[1_main_page_device_config_prop](images/1_main_page_device_config_prop.png)
+![1_main_page_device_config_prop](images/1_main_page_device_config_prop.png)
 
 If you click on the device, all the commands, attributes and pipes related to this device will be show in the Control Panel on the right. The Device Controls Widget will be also updated.
 
