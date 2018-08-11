@@ -166,6 +166,8 @@ As soon as the device in the Devises' tree is chosen the device widget is update
  
 _Hint:_ Double click on the device in the Devices tree and you can see the device structure and info.
 
+![3_device_tab](images/3_device_tab.png)
+
 Here you can:
 * get info about the device;
 * can see device's attributes, commands and pipes;
@@ -178,6 +180,8 @@ __NOTE__ if you get the following error, this means that Tango device is not exp
  
 
 Clicking on “Add to monitor” in the context menu of the attribute, you add it to the dashboard tab in the main view. The dashboard has the same view widget structure as the "monitor tab".
+
+![3_device_tab_to_monitor_1](images/3_device_tab_to_monitor_1.png)
 
 __NOTE__ The difference between “Dashboard” and “Monitor tab” is that you can add any attribute of ANY device to the Dashboard, whereas in the “Monitor tab” you see all the attributes of one device.
 
@@ -202,6 +206,9 @@ You can “Read”, “Plot”, “Plot.Hist” and “Write”.
 * Plot.Hist – plots historical values (usually 10). The number can be set in "Configuration tab" of device.
 * Write – writes a new value in the attribute. If you change the value by writing a new one in the Device Controls Panel, this attribute will be automatically updated in all other tabs and panels.
 
+![4_device_controls_write](images/4_device_controls_write.png)
+
+
 _Exercise_: 
 ``` 
 Select “my_test_device”;
@@ -217,6 +224,8 @@ To execute the command, first choose the command you need, then type the input v
 
 “Input” and “Output” boxes show what type of input value should be written and what output to expect.
 
+![5_device_controls_commands](images/5_device_controls_commands.png)
+
 _Exercise_: 
 ```  
 Select “DevDouble” enter 3.14 as input and press the “Execute” button
@@ -225,13 +234,16 @@ Select “DevDouble” enter 3.14 as input and press the “Execute” button
 ### Pipes tab
 It contains “Read” and “Write” buttons and field where you can write value as [JSON](http://tango-rest-api.readthedocs.io/en/latest/device/#device-pipes).
 
-
+![6_device_controls_pipes](images/6_device_controls_pipes.png)
 
 ## Main view
 
 ### Dashboard tab
 It has the same purpose as Device monitor, except that attributes can be added here manually from different devices.
 You can add any attributes from any devices to the Dashboard using context menu on the corresponding attributes in Device widget.
+
+![3_device_tab_to_monitor_1](images/3_device_tab_to_monitor_1.png)
+
 
 _Exercise_: 
 ```
@@ -245,6 +257,8 @@ Refresh the page
 
 ### Settings tab
 This tab can also be reachable by clicking on the user name.
+
+![7_main_page_settings](images/7_main_page_settings.png)
 
 ##### Tango REST API URL
 
@@ -280,6 +294,8 @@ You can apply more complicated filters, define which devices will be available. 
 
 To return to the full devices' tree apply: */*/*
 
+![7_main_page_settings_filter](images/7_main_page_settings_filter.png)
+
 _Exercise_: 
 ```
 Set
@@ -290,6 +306,8 @@ press “Apply”
 
 ### Scripting tab
 You can write and execute javascripts here. 
+
+![9_main_page_Scripting](images/9_main_page_Scripting.png)
 
 _“Scripts” block_ shows the names of javascript files you have. 
 
