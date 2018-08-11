@@ -9,6 +9,8 @@ To start Waltz you should know the link to the application's entry point (e.g. h
 
 The application is secured with the login and pass. The credentials should be given by admin department.
 
+![login](images/login.png)
+
 The application consists of 5 parts:
 
 1) Top tool bar (text filter, Devices tree and Device tree);
@@ -20,6 +22,8 @@ The application consists of 5 parts:
 4) Main view with the 3 tabs: Dashboard, Scripting and Settings;
 
 5) Right panel (collapsed by default) - Device Control Panel.
+
+![1_main_page](images/1_main_page.png)
 
 
 ## Top toolbar
@@ -37,6 +41,8 @@ On the right bottom corner you will find
 * user's actions log (![log_icon_users](images/log_icon_users.png)), 
 * application log (![log_icon_errors](images/log_icon_errors.png)) and 
 * “report an issue or bug” button - link to Waltz GitHub repository (![icon_github](images/icon_github.png)).
+
+![10_users_log](images/10_users_log.png)
 
 
 ## Left panel
@@ -74,12 +80,16 @@ Expand “development”, “sys” → “tg_test”.
 
 You can use aliases instead of members to fell more comfortable with the names. 
 
+[1_main_page_device_config_prop](images/1_main_page_device_config_prop.png)
+
 If you click on the device, all the commands, attributes and pipes related to this device will be show in the Control Panel on the right. The Device Controls Widget will be also updated.
 
 Right click on the device and you open a __context menu__:
  * Configure - opens a new tab with device configuration.
  * Monitor – opens a new tab with all the device's attributes.
  * Delete – obviously, delete the device.
+
+![1_main_page_device_menu](images/1_main_page_device_menu.png)
 
 
 #### Device configuration
@@ -89,7 +99,8 @@ Configuration tab contains properties, polling, events, attributes configuration
 
 For example, in the properties tab you can add, refresh, apply, delete property. Double click on the value and you can change it. 
 
-Here you can set the validity of the attribute to make it highlighted while monitoring.
+Here you can also set the validity of the attribute to make it highlighted while monitoring.
+![1_main_page_device_config_alarm](images/1_main_page_device_config_alarm.png)
 
 The rest tabs work the same way. 
 
@@ -102,6 +113,8 @@ Choose “Configure” from the context menu.
 #### Device monitor
 
 Right click on the "Monitor" in the device context menu and the monitor tab opens in the main view. The opened tab has the name of the monitored device.
+
+![1_main_page_device_monitor](images/1_main_page_device_monitor.png)
 
 Here you monitor _all_ devices' attributes. The tab contains attributes' monitor view widget with:
 * Status bar, 
