@@ -13,7 +13,7 @@ The application is secured with the login and pass. The credentials should be gi
 
 The application consists of 5 parts:
 
-1) Top tool bar (text filter, Devices tree and Device tree);
+1) Top tool bar;
 
 2) The bottom tool bar; 
 
@@ -23,7 +23,7 @@ The application consists of 5 parts:
 
 5) Right panel (collapsed by default) - Device Control Panel.
 
-![1_main_page](images/1_main_page.png)
+![1_main_page_marked](images/1_main_page_marked.png)
 
 
 ## Top toolbar
