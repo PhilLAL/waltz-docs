@@ -1,15 +1,5 @@
 # Installation and tutorial
 
-## Slides
-
-1. [Introduction](https://www.slideshare.net/secret/bGqura3owiyMtn)
-
-2. [Web/REST](https://www.slideshare.net/secret/bYRV0WRw24jotN)
-
-3. [Tango REST Server - mtangorest.server](https://www.slideshare.net/secret/pZioNqZIp6lToV)
-
-4. [Waltz (ex. TangoWebapp) aka client](https://www.slideshare.net/secret/LyqxvOpgy7gbJd)
-
 ## Prerequisites
 
 1. Install OpenJDK-8 -- Java Development Kit. For Debian/Ubuntu:

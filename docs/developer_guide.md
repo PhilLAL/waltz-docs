@@ -918,4 +918,10 @@ Waltz_code_platformAPI_StatefulMixin.png
 
 [2] [Waltz platform API references](https://tango-controls.github.io/waltz/)
 
-[3] [webix documentation](https://docs.webix.com/desktop__overview.html)
+[3] [JavaScriptMVC-1.5.x API references](https://jmvc-15x.github.io/docs/)
+
+[4] [webix documentation](https://docs.webix.com/desktop__overview.html)
+
+[5] [Full stack introduction (video)](https://rutube.ru/video/00d518e2aa8958b891430fbdf24f270a/)
+
+[6] [Waltz Overview (video)](https://vimeo.com/268669625)
