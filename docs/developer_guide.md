@@ -661,9 +661,9 @@ Where __data access layer__ is _Transport_. __Functional layer__ is PlatformAPI 
 Finally __UI layer__ is _webix_widgets_ i.e. smart components included into WaltzPlatform that can be used as building blocks 
 for custom applications/widgets built on top of WaltzPlatform.
 
-### Platform API
+### WaltzPlatform API
 
-Important part of the Platform is its API. Waltz Platform API has the following parts:
+Important part of the WaltzPlatform is its API. Waltz Platform API has the following parts:
 
 #### UIBuilder
 

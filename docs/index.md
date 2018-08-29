@@ -2,23 +2,23 @@ Waltz - a general purpose Tango web application that provide the interface betwe
 
 Waltz was designed as a platform on top of which web application was built. The reason of developing the application was the idea to give some “freedom” to the beamline scientists, e.g. to give:
 
-→ Convenient remote access (possibility to track the experiment outside the control room)
-→ Integrated Tango tools
-→ Powerful monitoring
-→ Scripting
+- → Convenient remote access (possibility to track the experiment outside the control room)
+- → Integrated Tango tools
+- → Powerful monitoring
+- → Scripting
 
 It is a general purpose application – you can browse devices, read and write attributes, pipes, monitor and configure (polling, adding, deleting).
 
 Speaking about Waltz you should understand that
 
-→ Each Beamline may have its own instance of Waltz;
-→ Each Beamline may have its own custom Dashboard;
-→ Each Beamline may have 100% custom Web application ontop of Waltz platform.
+- → Each Beamline may have its own instance of Waltz;
+- → Each Beamline may have its own custom Dashboard;
+- → Each Beamline may have 100% custom Web application ontop of Waltz platform.
 
 In general, you or DevOps install Waltz in the Beamline (which obviously should have Tango Controls), get all the credentials from sysandmins and can check what is going on in you Beamline accessing it in browser from any part of the world. The configuration options (e.g. hosts, devise filters, monitored attributes) and scripts are saved per user bas.
 
-Documentation is divided into several parts:
+Documentation is divided into three parts:
 
-- for Users (how to deal with the app);
-- for Developers (architecture, API);
-- Installation.
+- [Users guide](user_guide.md) 
+- [Developers guide](developer_guide.md)  
+- [Installation guide](installation_guide.md)

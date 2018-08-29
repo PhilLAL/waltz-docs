@@ -2,15 +2,8 @@ site_name: Waltz documentation
 site_url: https://github.com/tango-controls/waltz
 repo_url: https://github.com/tango-controls-waltz/waltz-docs
 
-theme:
-  name: 'material'
-
 pages:
 - Home: index.md
 - User Guide: user_guide.md
 - Developer Guide: developer_guide.md
-- Installation: installation_guide.md
-
-markdown_extensions:
-    - toc:
-        baselevel: 2
+- Installation Guide: installation_guide.md
