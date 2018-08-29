@@ -9,3 +9,7 @@ pages:
 - User Guide: user_guide.md
 - Developer Guide: developer_guide.md
 - Installation: installation_guide.md
+
+markdown_extensions:
+    - toc:
+        baselevel: 2
