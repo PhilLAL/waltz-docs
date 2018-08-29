@@ -3,7 +3,7 @@
 We shall start this developer guide with a super short introduction to the basic web technologies which are used in Waltz. 
 If you don't need this, please, skip this part and go directly to the Waltz description.
 
-# Short introduction to the basics of Web
+## Short introduction to the basics of Web
 Let's start with Client-Server architecture which looks like this at the first glance.
 
 ![devGuide_intro_client-serv_1](images/devGuide_intro_client-serv_1.png)
@@ -47,15 +47,15 @@ So putting it all together, we get the following diagram:
 ![devGuide_intro_putting_all_together](images/devGuide_intro_putting_all_together.png)
 
 
-# Waltz
+## Waltz
 
 From the developer point of view it is important to understand the following: Waltz per se is a web application built on top of WaltzPlatform. WaltzPlatform is a framework for Tango web applications (the framework may be extended to non-Tango applications as well, see architecture).
 
-## Waltz application
+### Waltz application
 
 Waltz application is a web application built using WaltzPlatform. Waltz is distributed as .war file.
 
-## WaltzPlatform
+### WaltzPlatform
 
 WaltzPlatform is a framework on top of JavaScriptMVC-1.5.x and webix. WaltzPlatform provides building blocks (API, UI components) for developing custom web applications. WaltzPlatform uses Tango REST as one of the backends and therefore allows interaction with Tango Controls.
 
@@ -69,7 +69,7 @@ Waltz itself consists of 2 parts: platform and end user UI. If you need, you can
 
 Frankly speaking, as a frontend developer you don't need to know the server part. Here we would like to give you a short overview to let you know how it is organized:
 
-## WaltzPlatform Tango REST backend (mTangoREST.server)
+### WaltzPlatform Tango REST backend (mTangoREST.server)
 [mTangoREST.server](https://github.com/ingvord/mtangorest.server) - is a Java implementation of a Tango Controls REST API specification. If you need C++ version, please, visit [RestDS](http://tangodevel.jinr.ru/git/tango/web/RestDS) page.
 
 mTangoREST.server has [two distributions](https://github.com/Ingvord/mtangorest.server/releases): .jar and .zip
@@ -118,17 +118,17 @@ Deployment should be done by system administrators. Below you can see how it was
 ![deployment_ESRF](images/deployment_ESRF.png)
 ![deployment_DESY](images/deployment_DESY.png)
 
-# Getting started as a developer
+## Getting started as a developer
 
 Make sure you have installed all the requirements. See [Installation guide](../installation_guide)
 
 You may want to skip this section and jump to [WaltzPlatform reference guide](#waltzplatform-reference-guide)
 
-## Developing custom dashboard for Waltz (ex. TangoWebapp)
+### Developing custom dashboard for Waltz (ex. TangoWebapp)
 
 In this section we will, first, develop a new widget (Dashboard) and integrate it into Waltz. Next, we will create a small custom application with this dashboard.
 
-### Adding a new widget
+#### Adding a new widget
 
 1. Create new _.js_ file in resources/webix_widgets and name it **my_dashboard.js**
 
@@ -256,7 +256,7 @@ _setup.js_ is required due to limitation of Nashorn (see upcoming presentation)
 
 **IMPORTANT**: run Tomcat from IntelliJ IDEA, **NOT** from Terminal. Otherwise Tomcat won't update sources and may not deploy proper application at all.
 
-### adding plot to the new widget
+#### adding plot to the new widget
 
 1. Replace _newPlotWidget_ function from the previous part with the following:
 
@@ -315,7 +315,7 @@ Here we use existing _ImageView_ from Waltz platform. In the next step we will a
 
 ![](images/installation_ide_8.png)
 
-### Further improvements
+#### Further improvements
 
 1. Use _Runnable_ mixin to perform the routine. Mixin - a block of code that lets us group declarations we may reuse.  
 
@@ -389,7 +389,7 @@ And of course it is a good practice to extract common functionality and re-use i
 
 ![](images/installation_ide_10.png)
 
-### Add functional test
+#### Add functional test
 
 1. First generate a new test stub in your project root:
 
@@ -461,7 +461,7 @@ The final version of the code for this exercise is available [here](https://gith
 
 [Live demo >>](http://ec2-35-156-104-8.eu-central-1.compute.amazonaws.com:8080/workshop-solaris-1)
 
-## Developing custom application using Waltz (ex. TangoWebapp) platform
+### Developing custom application using Waltz (ex. TangoWebapp) platform
 
 1. Create new jmvc app in the project root:
 
@@ -528,7 +528,7 @@ buildUI: function(platform){
 
 ![](images/installation_ide_12.png)
 
-### Packaging application
+#### Packaging application
 
 Packaging. Create _assemble_ script in the project root folder:
 
@@ -578,11 +578,11 @@ $>
 
 
 
-### Continuous integration
+#### Continuous integration
 
 1. Move _assemble_ script to jmvc/ folder. Now Travis will automatically build my_app every time new code is pushed to GitHub.
 
-### Applying custom styles
+#### Applying custom styles
 
 1. Go to the webix skin builder [link](https://webix.com/skin-builder/):
 
@@ -618,17 +618,17 @@ Final code for this exercise can be found [here](https://github.com/tango-contro
 
 [Live demo >>](http://ec2-35-156-104-8.eu-central-1.compute.amazonaws.com:8080/workshop-solaris-2/apps/my_app/index.html)
 
-## Advanced exercise
+### Advanced exercise
 
-### Data binding 
+#### Data binding 
 
 Automatically switch data source for our widget when user clicks on an image attribute in the Device tree view
 
-### Responsive design
+#### Responsive design
 
 Test application for design responsiveness using dev tools
 
-# WaltzPlatform reference guide
+## WaltzPlatform reference guide
 
 WaltzPlatform is a framework for building Tango web applications. Waltz application is such application.
 
@@ -651,7 +651,7 @@ WaltzPlatform module diagram:
 
 ![Waltz_module_diagram](images/Waltz_module_diagram.png)
 
-## High level architecture overview
+### High level architecture overview
 
 Waltz implements classical 3-tiers architecture:
 
@@ -661,11 +661,11 @@ Where __data access layer__ is _Transport_. __Functional layer__ is PlatformAPI 
 Finally __UI layer__ is _webix_widgets_ i.e. smart components included into WaltzPlatform that can be used as building blocks 
 for custom applications/widgets built on top of WaltzPlatform.
 
-## Platform API
+### Platform API
 
 Important part of the Platform is its API. Waltz Platform API has the following parts:
 
-### UIBuilder
+#### UIBuilder
 
 UIBuilder provides API to build UI of the application based on WaltzPlatform. Below is an example of using UIBuilder to build Waltz application UI:  
 
@@ -677,27 +677,27 @@ UIBuilder supports customization of all 5 panels, as well as not using some of t
 
 Full UIBuilder API reference: [link]()
 
-### Tango device model
+#### Tango device model
 
 WaltzPlatform provides high level API of the Tango devices model e.g. TangoDevice.
 
 Full API reference of the Tango device model can be found here: [link]()
 
-### Tango REST API js adapter
+#### Tango REST API js adapter
 
 WaltzPlatform provides API to Tango REST. TangoRest API implements builder pattern:
 
 ![](images/Waltz_code_TangoRequestAPI.png)
 
-### Utility models and helpers
+#### Utility models and helpers
 
-#### PlatformContext
+##### PlatformContext
 
 Context of the application. 
 
 Full API reference: [link]()
 
-#### UserContext
+##### UserContext
 
 Developer may store custom data per user basis using UserContext API. UserContext has _ext_ field that can store any data. UserContext may be backed by a dedicated backend to persist the data (for instance, [UserContextBackend](https://github.com/tango-controls-waltz/tango-webapp-user-context)). By default all the data is stored in-memory DB provided by WaltzPlatform.
 
@@ -707,19 +707,19 @@ To specify UserContext backend provide env argument to assemble command:
 
 Full UserContext API reference: [link]()
 
-#### include.js
+##### include.js
 
 include.js is a part of jmvc. include.js is used to define dependencies of the application:
 
 ![](images/Waltz_code_include.png)
 
-#### JS inheritance
+##### JS inheritance
 
 WaltzPlatform provides a number of models that can be extended using jmvc inheritance feature:
 
 ![](images/Waltz_code_extend.png)
 
-#### webix widgets
+##### webix widgets
 
 WaltzPlatform uses [webix](http://webix.com) for UI components and data binding.
 
@@ -735,13 +735,13 @@ Please read webix documentation to become familiar with protoUI.
 
 Full webix widgets API reference: [link]()
 
-#### webix mixins
+##### webix mixins
 
 Mixin is another way (comparing to inheritance) to extrend JS object's functionality. WaltzPlatform provides a number of mixins that can be used to extend custom widgets: 
 
 ![](images/Waltz_code_platformAPI_mixins.png)
 
-### OpenAjax events
+#### OpenAjax events
 
 WaltzPlatform uses OpenAjax event bus to loose coupling between components and to allow customizations. 
 
@@ -751,64 +751,64 @@ jmvc provides convenient way to declare subscription to an OpenAjax event:
 
 The following events are supported by WaltzPlatform:
 
-#### platform_context.create
+##### platform_context.create
 
 Fires when PlatformContext is being created 
 
-#### platform_context.destroy
+##### platform_context.destroy
 
 Fires when PlatformContext is being destroyed i.e. user logs off.
 
-#### platform_context.set_rest
+##### platform_context.set_rest
 
 Fires when TangoRest instance is being injected into PlatformContext
 
-#### platform_context.set_user_context
+##### platform_context.set_user_context
 
 Fires when UserContext instance is being injected into PlatformContext
 
-#### tango_webapp.tango_host_loaded
+##### tango_webapp.tango_host_loaded
 
 Fires when new TangoHost has been loaded
 
-#### tango_webapp.rest_send
+##### tango_webapp.rest_send
 
 Fires when new Tango REST request is being sent
 
-#### tango_webapp.rest_failure
+##### tango_webapp.rest_failure
 
 Fires when new Tango REST request has failed
 
-#### tango_webapp.rest_success
+##### tango_webapp.rest_success
 
 Fires when new Tango REST request has succeed
 
-#### tango_webapp.device_loaded
+##### tango_webapp.device_loaded
 
 Fires when new TangoDevice has been loaded
 
-#### tango_webapp.device_open
+##### tango_webapp.device_open
 
 Fires when user clicks on _open_ in DevicesTree context menu
 
-#### tango_webapp.device_configure
+##### tango_webapp.device_configure
 
 Fires when user clicks on _configure_ in DevicesTree context menu
 
-#### tango_webapp.device_delete
+##### tango_webapp.device_delete
 
 Fires when user clicks on _delete_ in DevicesTree context menu
 
-#### tango_webapp.device_view
+##### tango_webapp.device_view
 
 Fires when user clicks on _delete_ in DevicesTree context menu
 
-#### tango_webapp.device_view.update_attr_config
+##### tango_webapp.device_view.update_attr_config
 
 Fires when user updates device's configuration
 
 tango_webapp.attr_
-#### tango_webapp.attr_add_to_monitor
+##### tango_webapp.attr_add_to_monitor
 
 Fires when user adds a new attribute to Dashboard
 
@@ -816,55 +816,55 @@ tango_webapp.item_selected
 
 tango_webapp.database_loaded
 
-#### user_action.log
+##### user_action.log
 
 Fires when user action is being logged
 
-#### platform_api.ui.initialized
+##### platform_api.ui.initialized
 
 Fires when UI has been built
 
-#### platform.user_logout
+##### platform.user_logout
 
 Fires when user logs out
 
-#### user_context.create.as_existing
+##### user_context.create.as_existing
 
 Fires when new UserContext instance is being created
 
-#### user_context.destroy
+##### user_context.destroy
 
 Fires when new UserContext instance is being destroyed
 
-#### user_context_controller.found
+##### user_context_controller.found
 
 Fires when UserContext instance for given user has been found
 
-#### user_context_controller.update
+##### user_context_controller.update
 
 Fires when UserContext instance is being updated
 
-#### user_context_controller.destroy
+##### user_context_controller.destroy
 
 Fires when UserContext instance is being destroyed
 
-#### user_context_controller.add_tango_host
+##### user_context_controller.add_tango_host
 
 Fires when new TangoHost instance is being injected into UserContext instance
 
-#### user_context_controller.delete_tango_host
+##### user_context_controller.delete_tango_host
 
 Fires when new TangoHost instance is being deleted from UserContext instance
 
-#### tango_rest_api.is_alive
+##### tango_rest_api.is_alive
 
 Fires when new Tango REST server responds
 
-#### tango_rest_api.is_not_alive
+##### tango_rest_api.is_not_alive
 
 Fires when new Tango REST server does not respond
 
-# Unit and functional testing
+## Unit and functional testing
 
 Developer should write unit and functional tests to achieve better user experience with the application. WaltzPlatform applications can be switched to _test_ mode:
 
@@ -876,7 +876,7 @@ Refer to [add functional test](#add-functional-test) for more info on how to set
 
 To add unit test follow the procedure but use __unit__ key word instead of __functional__ e.g. `./jmvcc jmvc/generate/test unit my_unit_test`
 
-# Packaging and deployment
+## Packaging and deployment
 
 Using jmvc console utility program developer can package WaltzPlatform based applications into production ready .war files: `./jmvcc jmvc/assemble`
 
@@ -912,7 +912,7 @@ Waltz_code_JSDoc.png
 
 Waltz_code_platformAPI_StatefulMixin.png
 
-# Resources
+## Resources
 
 [1] [Exploring JS](http://exploringjs.com/)
 
