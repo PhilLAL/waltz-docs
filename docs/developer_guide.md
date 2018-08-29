@@ -122,7 +122,7 @@ Deployment should be done by system administrators. Below you can see how it was
 
 Make sure you have installed all the requirements. See [Installation guide](../installation_guide)
 
-You may want to skip this section and jump to [WaltzPlatform reference guide](.#waltzplatform_reference_guide)
+You may want to skip this section and jump to [WaltzPlatform reference guide](#waltzplatform-reference-guide)
 
 ## Developing custom dashboard for Waltz (ex. TangoWebapp)
 
@@ -628,15 +628,6 @@ Automatically switch data source for our widget when user clicks on an image att
 
 Test application for design responsiveness using dev tools
 
-## Resources
-
-[1] [Exploring JS](http://exploringjs.com/)
-
-[2] [Waltz platform API references](https://tango-controls.github.io/waltz/)
-
-[3] [webix documentation](https://docs.webix.com/desktop__overview.html)
-
-
 # WaltzPlatform reference guide
 
 WaltzPlatform is a framework for building Tango web applications. Waltz application is such application.
@@ -881,7 +872,7 @@ Developer should write unit and functional tests to achieve better user experien
 
 In this mode test console will appear (if not - make sure the popups are not blocked in your browser). Use this console to run unit/functional tests.
 
-Refer to [add functional test]() for more info on how to setup _test_ mode. 
+Refer to [add functional test](#add-functional-test) for more info on how to setup _test_ mode. 
 
 To add unit test follow the procedure but use __unit__ key word instead of __functional__ e.g. `./jmvcc jmvc/generate/test unit my_unit_test`
 
@@ -900,7 +891,7 @@ Below is an example of a deploy script that is run by Travis CI:
 
 __NOTE:__ in the script above resulting .war file is renamed after current repository branch name.
 
-Refer to [packaging application]() and [continous intergation]() sections for more details.
+Refer to [packaging application](#packaging-application) and [continous intergation](#continuous-integration) sections for more details.
 
 //TODO
 
@@ -920,3 +911,11 @@ Waltz_code_data_binding.png
 Waltz_code_JSDoc.png
 
 Waltz_code_platformAPI_StatefulMixin.png
+
+# Resources
+
+[1] [Exploring JS](http://exploringjs.com/)
+
+[2] [Waltz platform API references](https://tango-controls.github.io/waltz/)
+
+[3] [webix documentation](https://docs.webix.com/desktop__overview.html)
