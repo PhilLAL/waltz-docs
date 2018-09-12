@@ -38,12 +38,9 @@ On the left — REST API request status (shows current request to the Tango REST
 * failed — no response or it has an error.
 
 On the right bottom corner you will find 
-* user's actions log (![log_icon_users](images/log_icon_users.png)), 
+ 
 * application log (![log_icon_errors](images/log_icon_errors.png)) and 
 * “report an issue or bug” button - link to Waltz GitHub repository (![icon_github](images/icon_github.png)).
-
-![10_users_log](images/10_users_log.png)
-
 
 ## Left panel
 Consists of 3 parts: Filter by text, Devices Controls Widget and Device Controls Widget.
@@ -61,11 +58,11 @@ Delete “tg” in filter box.
 
 Shows all devices you have. In this widget you can configure device, monitor all its attributes and delete it, also filter by text.
 
-Usually, the devices tree widget has the following structure:
-
-![icon_rest](images/icon_rest.png) — Tango REST API URL (the entry point, connected with Tango);
+The devices tree widget has the following structure:
 
 ![icon_host](images/icon_host.png) — Tango host (in this application it is a container of devices);
+
+![icon_aliases](images/icon_aliases.png) — devices aliases (in this application it is a container of devices);
 
 ![icon_domain](images/icon_domain.png) — domains, catalog of families within one tango host;
 
@@ -78,7 +75,7 @@ _Exercise_:
 Expand “development”, “sys” → “tg_test”.
 ```
 
-You can use aliases instead of members to fell more comfortable with the names. 
+You can use aliases instead of members to feel more comfortable with the names. 
 
 ![1_main_page_device_config_prop](images/1_main_page_device_config_prop.png)
 
@@ -171,15 +168,16 @@ _Hint:_ Double click on the device in the Devices tree and you can see the devic
 Here you can:
 * get info about the device;
 * can see device's attributes, commands and pipes;
-* use context menu on Attributes to add to the Dashboard (“Add to monitor”);
-* click on attribute or command or pipe to select it in Device Control Panel.
+* Drag-n-Drop Attributes to the [Dashboard](#dashboard-tab);
+* click on attribute or command or pipe to select it in [Control Panel](#control-panel);
+* dbl click on attribute or command or pipe to expand [Control Panel](#control-panel).
 
 __NOTE__ if you get the following error, this means that Tango device is not exported:
 
 > Reason: TangoProxyException Description: Failed to get proxy for tango://hzgxenvtest.desy.de:10000/development/camel/0:ProxyException in Failed to apply creation policy for proxy development/camel/0 PANIC: TangoApi_DEVICE_NOT_EXPORTED development/camel/0 Not Exported ! Connection(development/camel/0) ERR: TangoApi_CANNOT_IMPORT_DEVICE Cannot import development/camel/0 Connection.build_connection(development/camel/0)[Failed to apply creation policy for proxy development/camel/0:TangoApi_DEVICE_NOT_EXPORTED[development/camel/0 Not Exported !]] Origin: org.tango.web.server.TangoProxyPool.getProxy(TangoProxyPool.java:74)
  
 
-Clicking on “Add to monitor” in the context menu of the attribute, you add it to the dashboard tab in the main view. The dashboard has the same view widget structure as the "monitor tab".
+Drag-n-Drop an attribute to add it to the dashboard tab in the main view. The dashboard has the same view widget structure as the "monitor tab".
 
 ![3_device_tab_to_monitor_1](images/3_device_tab_to_monitor_1.png)
 
@@ -192,14 +190,17 @@ Select any attribute or command or pipe,
 this also selects it in the Device control panel.
 ```
 
-## Right panel - Device Control Panel
-It has 3 tabs (Attributes, Commands and Pipes) each of which has filter by text.
+### Control Panel
+
+It has 3 views (Attributes, Commands and Pipes). Switch between views happens automatically when corresponding entity is selected in Device View panel:
+
+![4_device_controls_write](images/4_device_control_panel.png)
 
 To work with the Device Controls Panel you should select the device first (e.g. in Devices tree widget or in Device widget or click on an attribute in the Dashboard etc.). Name of the selected device is shown above Attributes, Commands and Pipes tabs.
 
 All the attributes, commands and pipes refer to the selected device.
 
-### Attributes tab
+#### Attributes view
 You can “Read”, “Plot”, “Plot.Hist” and “Write”. 
 * Read – shows info about the attribute;
 * Plot – reads the value and plot it. No automatic updates. If you want automatic updates, add attribute to monitor to the Dashboard in Device widget.
@@ -219,7 +220,7 @@ click “Plot”;
 click “Plot.Hist”;
 ```
 
-### Commands tab
+#### Commands view
 To execute the command, first choose the command you need, then type the input value. 
 
 “Input” and “Output” boxes show what type of input value should be written and what output to expect.
@@ -231,10 +232,16 @@ _Exercise_:
 Select “DevDouble” enter 3.14 as input and press the “Execute” button
 ```
 
-### Pipes tab
+#### Pipes tab
 It contains “Read” and “Write” buttons and field where you can write value as [JSON](http://tango-rest-api.readthedocs.io/en/latest/device/#device-pipes).
 
 ![6_device_controls_pipes](images/6_device_controls_pipes.png)
+
+## Right panel
+
+Displays user activity:
+
+![6_device_controls_pipes](images/7_user_log.png)
 
 ## Main view
 
