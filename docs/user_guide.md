@@ -1,3 +1,5 @@
+[TOC]
+
 Before deepening into Waltz , please, note a list of very simple actions, but they really worth doing while using web-applications:
 * Redo last actions
 * Refresh the page
