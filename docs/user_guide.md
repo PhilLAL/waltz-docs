@@ -83,10 +83,11 @@ If you click on the device, all the commands, attributes and pipes related to th
 
 #### Context menu
 
-Right click on the device and you open a __context menu__:
- * Configure - opens a new tab with device configuration.
- * Monitor – opens a new tab with all the device's attributes.
- * Delete – obviously, delete the device.
+Right click on the device to open a __context menu__:
+
+ - Configure - opens a new tab with device configuration.
+ - Monitor – opens a new tab with all the device's attributes.
+ - Delete – obviously, deletes the device.
 
 ![1_main_page_device_menu](images/1_main_page_device_menu.png)
 
