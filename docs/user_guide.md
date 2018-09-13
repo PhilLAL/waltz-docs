@@ -81,81 +81,14 @@ You can use aliases instead of members to feel more comfortable with the names.
 
 If you click on the device, all the commands, attributes and pipes related to this device will be show in the Control Panel on the right. The Device Controls Widget will be also updated.
 
+#### Context menu
+
 Right click on the device and you open a __context menu__:
  * Configure - opens a new tab with device configuration.
  * Monitor – opens a new tab with all the device's attributes.
  * Delete – obviously, delete the device.
 
 ![1_main_page_device_menu](images/1_main_page_device_menu.png)
-
-
-#### Device configuration
-Right click on the device allows to open context menu and choose "Configure" menu item. It opens device configuration tab (new tab in the main view) with the name of the configurated device.
-
-Configuration tab contains properties, polling, events, attributes configuration and logging tabs which in their turn have their own tabs.
-
-For example, in the properties tab you can add, refresh, apply, delete property. Double click on the value and you can change it. 
-
-Here you can also set the validity of the attribute to make it highlighted while monitoring.
-![1_main_page_device_config_alarm](images/1_main_page_device_config_alarm.png)
-
-The rest tabs work the same way. 
-
-_Exercise_: 
-```
-Go “sys” → “tg_test” → “my_test_device”.
-Choose “Configure” from the context menu.
-```
-
-#### Device monitor
-
-Right click on the "Monitor" in the device context menu and the monitor tab opens in the main view. The opened tab has the name of the monitored device.
-
-![1_main_page_device_monitor](images/1_main_page_device_monitor.png)
-
-Here you monitor _all_ devices' attributes. The tab contains attributes' monitor view widget with:
-* Status bar, 
-* Scalar plot view, 
-* Scalar's data table, 
-* Spectrum tabs, 
-* Image tabs and 
-* tool bar. 
-
-_Status bar_ contains information about device. 
-
-Scalar attributes are listed in the _Scalar's data table_ where you can plot them clicking on the plot icon (![icon_plot](images/icon_plot.png)). This plot will be shown in the _Scalar plot view_. To delete the plot just click on the cross of the related attribute in the Scalar's data table.
-
-Attributes in  Scalar's data table may be highlighted depending on attribute quality set in Tango (“warning” or “alarm”). You can set these values using Waltz (Devices tree widget → context menu on the device → Configure → Attributes config → Alarms).
-
-Each Spectrum and Image attribute will have its own tab. Clicking on a spectrum you get the plot. 
-
-_Tool bar_ has the following controls:
-* Arrow – shows status of refreshing of attributes' values;
-* Number – refresh rate of attributes' values (milliseconds);
-* Refresh button – to set a new value of  refresh rate;
-* Pause button – to pause refreshing.
-
-__NOTE__ Values are updated only if visible.
-
-_Exercise_: 
-```
-Go “sys” → “tg_test” → “my_test_device”.
-Choose “Monitor” from the context menu.
-```
-
-_Exercise_: 
-```
-Click on the plot icon of “Double Scalar” attribute.
-Click on the plot icon of “short_scalar” attribute.
-To stop plotting “Double Scalar” attribute click on “x” in the data table.
-Open “double_spectrum_ro”.
-Open “short_image_ro”.
-```
-
-_Exercise_: 
-```
-Set 3000 and press refresh button. 
-```
 
 ### Device widget
 
@@ -249,8 +182,9 @@ Displays user activity:
 It has the same purpose as Device monitor, except that attributes can be added here manually from different devices.
 You can add any attributes from any devices to the Dashboard using context menu on the corresponding attributes in Device widget.
 
-![3_device_tab_to_monitor_1](images/3_device_tab_to_monitor_1.png)
+![3_device_tab_to_monitor_1](images/4_dashboard.png)
 
+Plots are powered by plotly.js. Please refer to plotly documentation to get use of it: [link](https://plot.ly/plotly-js-scientific-d3-charting-library)
 
 _Exercise_: 
 ```
@@ -261,6 +195,112 @@ Select attribute “short_image_ro” and add it to monitor using context menu.
 Select “double_spectrum_ro” and add it to Dashboard using context menu. 
 Refresh the page
 ```
+
+### Device monitor
+
+Right click on the "Monitor" in [the device context](#context-menu) menu and the monitor tab opens in the main view. The opened tab has the name of the monitored device.
+
+![1_main_page_device_monitor](images/1_main_page_device_monitor.png)
+
+Here you monitor _all_ devices' attributes. The tab contains attributes' monitor view widget with:
+* Status bar, 
+* Scalar plot view, 
+* Scalar's data table, 
+* Spectrum tabs, 
+* Image tabs and 
+* tool bar. 
+
+_Status bar_ contains information about device. 
+
+Scalar attributes are listed in the _Scalar's data table_ where you can plot them clicking on the plot icon (![icon_plot](images/icon_plot.png)). This plot will be shown in the _Scalar plot view_. To delete the plot just click on the cross of the related attribute in the Scalar's data table.
+
+Attributes in  Scalar's data table may be highlighted depending on attribute quality set in Tango (“warning” or “alarm”). You can set these values using Waltz (Devices tree widget → context menu on the device → Configure → Attributes config → Alarms).
+
+Each Spectrum and Image attribute will have its own tab. Clicking on a spectrum you get the plot. 
+
+_Tool bar_ has the following controls:
+* Arrow – shows status of refreshing of attributes' values;
+* Number – refresh rate of attributes' values (milliseconds);
+* Refresh button – to set a new value of  refresh rate;
+* Pause button – to pause refreshing.
+
+Plots are powered by plotly.js. Please refer to plotly documentation to get use of it: [link](https://plot.ly/plotly-js-scientific-d3-charting-library)
+
+__NOTE__ Values are updated only if visible.
+
+_Exercise_: 
+```
+Go “sys” → “tg_test” → “my_test_device”.
+Choose “Monitor” from the context menu.
+```
+
+_Exercise_: 
+```
+Click on the plot icon of “Double Scalar” attribute.
+Click on the plot icon of “short_scalar” attribute.
+To stop plotting “Double Scalar” attribute click on “x” in the data table.
+Open “double_spectrum_ro”.
+Open “short_image_ro”.
+```
+
+_Exercise_: 
+```
+Set 3000 and press refresh button. 
+```
+
+### Device configuration
+
+Choose "Configure" in [the device context](#context-menu). It opens device configuration tab (new tab in the main view) with the name of the configurated device.
+
+Configuration tab contains properties, polling, events, attributes configuration and logging tabs which in their turn have their own tabs.
+
+For example, in the properties tab you can add, refresh, apply, delete property. Double click on the value and you can change it. 
+
+Here you can also set the validity of the attribute to make it highlighted while monitoring.
+
+![1_main_page_device_config_alarm](images/1_main_page_device_config_alarm.png)
+
+The rest tabs work the same way. 
+
+_Exercise_: 
+```
+Go “sys” → “tg_test” → “my_test_device”.
+Choose “Configure” from the context menu.
+```
+
+
+### Scripting tab
+You can write and execute javascripts here. 
+
+![9_main_page_Scripting](images/9_main_page_Scripting.png)
+
+_“Scripts” block_ shows the names of javascript files you have. 
+
+If you want to create a new javascript file, type the name of your future file in _“Script name” field_ and your code in _“Script code”_. When click on run button (![icon_run](images/icon_run.png)) in the left bottom your script is automatically saved but you must fill _Script name_ first!
+
+The result of the scritp is shown in _“Script output”_ box. 
+
+Of course, you can delete your script clicking on (![icon_trash](images/icon_trash.png)). 
+
+To change the script – select the needed one from the “Scripts” block.
+
+_Exercise_: 
+``` 
+Script name: sum
+Script code: return 2+2
+Press “ctrl+enter” to execute the script or click execute button
+```
+```
+Script name: readAttribute
+Script code:
+return PlatformContext.rest.fetchHost('localhost:10000')
+  .then(host => host.fetchDevice('sys/tg_test/1'))
+  .then(device => device.fetchAttr('double_scalar'))
+  .then(attr => attr.read())
+  .then(value => value.value)
+Press “ctrl+enter” to execute the script
+```
+
 
 ### Settings tab
 This tab can also be reachable by clicking on the user name.
@@ -311,37 +351,10 @@ tango/*/*
 press “Apply”
 ```
 
-### Scripting tab
-You can write and execute javascripts here. 
 
-![9_main_page_Scripting](images/9_main_page_Scripting.png)
+## Resources
 
-_“Scripts” block_ shows the names of javascript files you have. 
-
-If you want to create a new javascript file, type the name of your future file in _“Script name” field_ and your code in _“Script code”_. When click on run button (![icon_run](images/icon_run.png)) in the left bottom your script is automatically saved but you must fill _Script name_ first!
-
-The result of the scritp is shown in _“Script output”_ box. 
-
-Of course, you can delete your script clicking on (![icon_trash](images/icon_trash.png)). 
-
-To change the script – select the needed one from the “Scripts” block.
-
-_Exercise_: 
-``` 
-Script name: sum
-Script code: return 2+2
-Press “ctrl+enter” to execute the script or click execute button
-```
-```
-Script name: readAttribute
-Script code:
-return PlatformContext.rest.fetchHost('localhost:10000')
-  .then(host => host.fetchDevice('sys/tg_test/1'))
-  .then(device => device.fetchAttr('double_scalar'))
-  .then(attr => attr.read())
-  .then(value => value.value)
-Press “ctrl+enter” to execute the script
-```
+[1] [Waltz Overview (video)](https://vimeo.com/268669625)
 
 
 
