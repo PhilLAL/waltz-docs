@@ -46,7 +46,7 @@ $> ./TangoRestServer
 ```
 5. To test, open new Terminal and execute
 ```bash
-$> curl -u "tango-cs:tango" http://localhost:10001/tango/rest/rc4 | json_pp
+$> curl -u "tango-cs:tango" http://localhost:10001/tango/rest | json_pp
 % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
 100    93    0    93    0     0   4200      0 --:--:-- --:--:-- --:--:--  4227
