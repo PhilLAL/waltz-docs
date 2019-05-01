@@ -15,7 +15,7 @@ Speaking about Waltz you should understand that
 - → Each Beamline may have its own custom Dashboard;
 - → Each Beamline may have 100% custom Web application ontop of Waltz platform.
 
-In general, you or DevOps install Waltz in the Beamline (which obviously should have Tango Controls), get all the credentials from sysandmins and can check what is going on in you Beamline accessing it in browser from any part of the world. The configuration options (e.g. hosts, devise filters, monitored attributes) and scripts are saved per user bas.
+In general, you or DevOps install Waltz in the Beamline (which obviously should have Tango Controls), get all the credentials from sysadmins and can check what is going on in you Beamline accessing it in browser from any part of the world. The configuration options (e.g. hosts, devise filters, monitored attributes) and scripts are saved per user bas.
 
 Documentation is divided into three parts:
 
