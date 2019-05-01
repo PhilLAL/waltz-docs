@@ -24,22 +24,24 @@ The application consists of 5 parts:
 
 3. Left panel with Devices tree widget (the root is the REST API server
    name) with filter by text, Device's Control Widget with filter by
-   text and description widget.
+   text, Description widget and Toolbar.
 
-4. Main view with the Dashboard tab;
+4. Right panel (collapsed by default) - User's actions log;
 
-5. Right panel (collapsed by default) - User's actions log.
+5. Main view with the Dashboard tab.
+
 
 ![panels](images/panels.png)
 
 
 ## 1 Top toolbar
 On the left it contains the following menu items:
+
 -  user's name with "Settings" and "Sign out" subitems;
 -  Tools with "Scripting" subitem;
 -  "Help" with links to "About" and "User docs".
 
-#### 1.1 Scripting tab
+### 1.1 Scripting tab
 You can write and execute javascripts here. 
 
 ![tab_scripting](images/tab_scripting.png)
@@ -72,20 +74,20 @@ Press “ctrl+enter” to execute the script
 ```
 
 
-#### 1.2 Settings tab
+### 1.2 Settings tab
 
 ![tab_settings](images/tab_settings.png)
 
-##### 1.2.1 Tango REST API URL
+#### 1.2.1 Tango REST API URL
 
 Url of REST API entry point. Usually the correct value is set during the deployment so usually you don't need to change it. But it is possible to add new REST API hosts (will rewrite the existing one).
 
-##### 1.2.2 Tango hosts
+#### 1.2.2 Tango hosts
 
 List of user's Tango hosts. You can delete or add Tango hosts here. Template for Tango host: {host}:{port}.
 
 
-##### 1.2.3 Tango Server Wizard
+#### 1.2.3 Tango Server Wizard
 
 You can add new device(s) here. 
 
@@ -99,7 +101,7 @@ Devices: test/tg_test/x;  test/tg_test/y
 
 You have just added it to the database. The newly added devices are not running. You should start manually.
 
-##### 1.2.4 Device filters
+#### 1.2.4 Device filters
 
 In fact, there are 3 filters in the application. But two of them (in Devices tree widget and in Device Control Panel) are text filters and the one you have here allows you to combine.
 
@@ -120,14 +122,15 @@ press “Apply”
 
 ## 2 Bottom toolbar
 On the left — REST API request status (shows current request to the Tango REST Server). Can have the following states:
+
  - pending — the request is being sent but no response yet;
  - done — response from Tango REST Server have been successfully received;
  - failed — no response or it has an error.
 
 On the right bottom corner you will find 
  
-* application log (![log_icon_errors](images/log_icon_errors.png)) and 
-* “report an issue or bug” button - link to Waltz GitHub repository (![icon_github](images/icon_github.png)).
+* application log ![log_icon_errors](images/log_icon_errors.png) and 
+* “report an issue or bug” button - link to Waltz GitHub repository ![icon_github](images/icon_github.png).
 
 ## 3 Left panel
 Consists of 4 parts: 
@@ -138,7 +141,7 @@ Consists of 4 parts:
 
 3. Description widget;
 
-4. Left panel toolbar
+4. Left panel toolbar.
 
 
 
@@ -180,14 +183,14 @@ names. To do this, please, refer to Description widget.
 
 If you click on the device, all the commands, attributes and pipes
 related to this device will be show in Device's Control Widget. The
-Device's Control Widget will be also updated.
+Device's Control Widget will be updated.
 
-#### 3.2.1 Context menu
+#### 3.1.1 Context menu
 
 Right click on the device to open a __context menu__:
 
- - Configure - opens a new tab with device configuration.
- - Monitor – opens a new tab with all the device's attributes.
+ - Configure - opens a new tab with device configuration;
+ - Monitor – opens a new tab with all the device's attributes;
  - Delete – obviously, deletes the device.
 
 ![left_panel_context_menu](images/left_panel_context_menu.png)
@@ -205,8 +208,8 @@ the device's control widget.
 Here you can:
  
 - See device's attributes, commands and pipes;
-- Drag-n-Drop Attributes to the [Dashboard](#dashboard-tab);
-- click on attribute or command or pipe to select it for editing;
+- Drag-n-Drop Attributes to the [Dashboard](#Dashboard-tab);
+- Click on attribute or command or pipe to select it for editing;
 - Double click on attribute or command or pipe to expand description
   widget;
 - Search in Search box which filters all three device child entity types
@@ -239,19 +242,21 @@ All shown attributes, commands and pipes refer to the selected
 device.
 
 In Device's Controls widget it is also possible to control attributes,
-commands and pipes. All controls widgets have 
-- ![icon_eye](images/icon_eye.png) - opens description of the chosen item 
+commands and pipes. All controls widgets have: 
+
+- ![icon_eye](images/icon_eye.png) - opens description of the chosen item;
 - ![icon_info](images/icon_info.png) - opens a new tab with **toolbar** in the main view with
-   functionality corresponding to the selectied item (attribute, command
-   or pipe). 
+   functionality corresponding to the selectied item (attribute, command or pipe). 
    
-_The Toolbar_ has the following controls:
+This Toolbar has the following controls:
+
 * Number – a refresh/execute rate (milliseconds);
 * Refresh button – set a new value of  refresh rate;
 * Pause or Start button – to pause or strart refreshing/executing.
 
-##### 3.3.1 Attribute's control
+#### 3.2.1 Attribute's control
 You can “Read”, “Plot”, “Plot.Hist” and “Write”. 
+
 * Read – shows info about the attribute;
 * Plot – reads the value and plot it. No automatic updates. If you want
   automatic updates, add attribute to monitor to the Dashboard.
@@ -273,7 +278,7 @@ click “Plot”;
 click “Plot.Hist”;
 ```
 
-##### 3.3.2 Command's control
+#### 3.2.2 Command's control
 To execute the command, first choose the command you need, then type the input value. 
 
 If there is an “Input” box, it shows what type of input value should be
@@ -292,7 +297,7 @@ _Exercise_:
 Select “DevDouble” enter 3.14 as input and press the “Execute” button
 ```
 
-##### 3.3.3 Pipe's control
+#### 3.2.3 Pipe's control
 It contains “Read” button. By clicking on it a new tab in the main view
 will be opened. In this new tab it is possible to write a new value as 
 [JSON](http://tango-rest-api.readthedocs.io/en/latest/device/#device-pipes).
@@ -301,7 +306,7 @@ will be opened. In this new tab it is possible to write a new value as
 ### 3.3 Description widget
 Contains readonly information. Been automatically updated when click on
 the name of Tango host (values are loaded from the REST server), device
-or attribute, command or pipes.
+or attribute, command or pipe.
 
 ![left_panel_description](images/left_panel_description.png)
 
@@ -310,17 +315,15 @@ or attribute, command or pipes.
 Depending on which widget of the Left panel you are, the toolbar has
 different buttons. 
 
-
-
 - ![icon_update](images/icon_update.png)
   \- refresh button Devices tree and it is always presented in the
   toolbar;
 - ![icon_save](images/icon_save.png)
   \- save button appears when you are in the Description button
 - ![icon_eye](images/icon_eye.png)
-  \-  monitor button, works the same as Device monitor ([]!!!)
+  \-  monitor button, works the same as Device monitor
 - ![icon_configure](images/icon_configure.png)
-  \- configuration button, works the same as Device configuration ([]!!!)
+  \- configuration button, works the same as Device configuration
   
 
 ## 4 Right panel
@@ -363,6 +366,7 @@ the main view. The opened tab has the name of the monitored device.
 
 Here you monitor _all_ device's attributes. The tab contains attributes'
 monitor view widget with:
+
 * Status bar, 
 * Scalars tab with scalars's data table, 
 * Plot tab with view of scalars,
@@ -374,12 +378,11 @@ _Status bar_ contains information about device.
 
 Scalar attributes are listed in the _Scalars tab_ as a data table where
 you can plot them clicking on the plot icon
-(![icon_plot](images/icon_plot.png)
-). This plot will be shown in the _Plot tab_. To delete the plot just
+(![icon_plot](images/icon_plot.png)). This plot will be shown in the _Plot tab_. To delete the plot just
 click on the cross of the related attribute in the Scalars data table.
 
 There is also possibility to configure columns of the Scalars tab by
-clicking on !!!IMG in the toolbar, select the desired columns in the
+clicking on ![icon_scalars_table_configuration](images/icon_scalars_table_configuration) in the toolbar, select the desired columns in the
 appeared box and click "Apply" button.
 
 Attributes in Scalar's data table may be highlighted depending on
@@ -389,7 +392,7 @@ Configure → Attributes config → Alarms).
 
 Each Spectrum and Image attribute will have its own tab. Clicking on a spectrum you get the plot. 
 
-_Toolbar_ has the following controls:
+_Toolbar_ has the following controls on the left:
 
 * Number – refresh rate of attributes' values (milliseconds);
 * Refresh button – to set a new value of  refresh rate;
