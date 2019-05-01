@@ -48,11 +48,11 @@ You can write and execute javascripts here.
 
 _“Scripts” block_ shows the names of javascript files you have. 
 
-If you want to create a new javascript file, type the name of your future file in _“Script name” field_ and your code in _“Script code”_. When click on run button (![icon_run](images/icon_run.png)) in the left bottom your script is automatically saved but you must fill _Script name_ first!
+If you want to create a new javascript file, type the name of your future file in _“Script name” field_ and your code in _“Script code”_. When click on run button ![icon_run](images/icon_run.png) in the left bottom your script is automatically saved but you must fill _Script name_ first!
 
 The result of the scritp is shown in _“Script output”_ box. 
 
-Of course, you can delete your script clicking on (![icon_trash](images/icon_trash.png)). 
+Of course, you can delete your script clicking on ![icon_trash](images/icon_trash.png). 
 
 To change the script – select the needed one from the “Scripts” block.
 
@@ -107,7 +107,7 @@ In fact, there are 3 filters in the application. But two of them (in Devices tre
 
 You can apply more complicated filters, define which devices will be available. Moreover, several filters can be run simultaneously. Type each of them on new line and press “Apply filters” button.
 
-To return to the full devices' tree apply: */*/*
+To return to the full devices' tree apply: "*/*/*"
 
 ![tab_settings_filter](images/tab_settings_filter.png)
 
@@ -208,12 +208,12 @@ the device's control widget.
 Here you can:
  
 - See device's attributes, commands and pipes;
-- Drag-n-Drop Attributes to the [Dashboard](#Dashboard-tab);
+- Drag-n-Drop Attributes to the Dashboard;
 - Click on attribute or command or pipe to select it for editing;
 - Double click on attribute or command or pipe to expand description
   widget;
 - Search in Search box which filters all three device child entity types
-  simultaneously. a: shows only attributes; c: -- commands; p: -- pipes.
+  simultaneously. __a:__ shows only attributes; __c:__ -- commands; __p:__ -- pipes.
 
 __NOTE__ if you get the following error, this means that Tango device is
 not exported:
