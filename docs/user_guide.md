@@ -28,7 +28,7 @@ The application consists of 5 parts:
 
 4. Right panel (collapsed by default) - User's actions log;
 
-5. Main view with the Dashboard tab.
+5. Main view with the Dashboard tab by default.
 
 
 ![panels](images/panels.png)
