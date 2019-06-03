@@ -30,5 +30,13 @@ Documentation is divided into three parts:
 Waltz is a combined effort of:
 
 [![](images/tango_in_color.png)](http://tango-controls.org)
+
+
+
 [![](images/hzg_rgb_mitzusatz_in_e_300dpi.png)](http://hzg.de)
+
+
+
 [![](images/logo_ik.png)](http://ingvord.ru)
+
+
