@@ -1,4 +1,8 @@
-Waltz - a general purpose Tango web application that provide the interface between the Tango control system and the scientific users who define and calibrate their experiments. It first had a name of TangoWebapp but on the Tango Users Meeting 32 during the voting it gained its name as Waltz. So if you find something about TangoWebapp just know that it is the same project.
+![](images/logo_Waltz.png)
+
+
+
+A general purpose Tango web application that provide the interface between the Tango control system and the scientific users who define and calibrate their experiments. It first had a name of TangoWebapp but on the Tango Users Meeting 32 during the voting it gained its name as Waltz. So if you find something about TangoWebapp just know that it is the same project.
 
 Waltz was designed as a platform on top of which web application was built. The reason of developing the application was the idea to give some “freedom” to the beamline scientists, e.g. to give:
 
@@ -27,4 +31,4 @@ Waltz is a combined effort of:
 
 [![](images/tango_in_color.png)](http://tango-controls.org)
 [![](images/hzg_rgb_mitzusatz_in_e_300dpi.png)](http://hzg.de)
-![](images/logo_ik.png)
+[![](images/logo_ik.png)](http://ingvord.ru)
