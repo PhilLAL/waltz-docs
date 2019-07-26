@@ -31,17 +31,21 @@ The application consists of 5 parts:
 5. Main view with the Dashboard tab by default.
 
 
-![panels](images/panels.png)
+![panels](images/panels_without_delete_menu.png)
 
 
 ## 1 Top toolbar
 On the left it contains the following menu items:
 
--  user's name with "Settings" and "Sign out" subitems;
--  Tools with "Scripting" subitem;
--  "Help" with links to "About" and "User docs".
+-  User's name with "Settings" and "Sign out" subitems;
+-  Tools with "Scripting", "Manager", "Terminal" subitems;
+-  "Help" with links to "About", "User docs" and create a "New issue" in
+   GutHub.
 
-### 1.1 Scripting tab
+
+### 1.1 "Tools" menu
+
+#### 1.1.1 Scripting tab
 You can write and execute javascripts here. 
 
 ![tab_scripting](images/tab_scripting.png)
@@ -73,21 +77,50 @@ return PlatformContext.rest.fetchHost('localhost:10000')
 Press “ctrl+enter” to execute the script
 ```
 
+#### 1.1.2 Manager
 
-### 1.2 Settings tab
+![tab_manager](images/tab_manager.png)
+
+Manager tab was created to make it possible to have an overview of all
+Tango Hosts and Tango Servers (under *Tango Severs*). To make Tango
+Servers appear, click on Tango Host in the tree from the left panel or
+on Tango Host above *Tango Severs* label.
+
+-  Kill button — kills selected server (sends "kill-9");
+-  Stop button — stops selected server (uses "Starter" command);
+-  Start button — starts selected server (uses "Starter" command).
+
+All *Tango Devices* are available under "Tango Devices" after selection
+of Tango Server. It is also possible to add, update or delete device
+using a dedicated box right under the "Tango Devices" label. Place
+holders in fields will help you to add a new device in correct way.
+
+*Selected Device info* shows all available information on the device. It
+updates on click. You may also choose device from the Tango device tree
+in the left panel to see information about it in this table.
+
+*Manager's Log* provides list of user's actions with servers showing
+date, time and action.
+
+#### 1.1.3 Terminal
+A tab with Terminal will allow you to have a fully functional linux
+terminal.
+
+### 1.2 User's name 
+
+#### 1.2.1 Settings tab
 
 ![tab_settings](images/tab_settings.png)
 
-#### 1.2.1 Tango REST API URL
+##### 1.2.1.1 Tango REST API URL
 
 Url of REST API entry point. Usually the correct value is set during the deployment so usually you don't need to change it. But it is possible to add new REST API hosts (will rewrite the existing one).
 
-#### 1.2.2 Tango hosts
+##### 1.2.1.2 Tango hosts
 
 List of user's Tango hosts. You can delete or add Tango hosts here. Template for Tango host: {host}:{port}.
 
-
-#### 1.2.3 Tango Server Wizard
+##### 1.2.1.3 Tango Server Wizard
 
 You can add new device(s) here. 
 
@@ -101,7 +134,7 @@ Devices: test/tg_test/x;  test/tg_test/y
 
 You have just added it to the database. The newly added devices are not running. You should start manually.
 
-#### 1.2.4 Device filters
+##### 1.2.1.4 Device filters
 
 In fact, there are 3 filters in the application. But two of them (in Devices tree widget and in Device Control Panel) are text filters and the one you have here allows you to combine.
 
@@ -119,6 +152,11 @@ tango/*/*
 press “Apply”
 ```
 
+#### 1.2.2 Sign out
+Use this for correct end of session and to prevent others from changing
+your settings and managing your hosts and devices.
+
+
 
 ## 2 Bottom toolbar
 On the left — REST API request status (shows current request to the Tango REST Server). Can have the following states:
@@ -129,8 +167,9 @@ On the left — REST API request status (shows current request to the Tango REST
 
 On the right bottom corner you will find 
  
-* application log ![log_icon_errors](images/log_icon_errors.png) and 
-* “report an issue or bug” button - link to Waltz GitHub repository ![icon_github](images/icon_github.png).
+ - application log ![log_icon_errors](images/log_icon_errors.png)
+ - “report an issue or bug” button - link to Waltz GitHub repository
+     ![icon_github](images/icon_github.png)
 
 ## 3 Left panel
 Consists of 4 parts: 
@@ -190,10 +229,9 @@ Device's Control Widget will be updated.
 Right click on the device to open a __context menu__:
 
  - Configure - opens a new tab with device configuration;
- - Monitor – opens a new tab with all the device's attributes;
- - Delete – obviously, deletes the device.
+ - Monitor – opens a new tab with all the device's attributes.
 
-![left_panel_context_menu](images/left_panel_context_menu.png)
+![left_panel_context_menu](images/left_panel_context_menu_without_delete.png)
 
 ### 3.2 Device's Control Widget
 
@@ -223,7 +261,7 @@ not exported:
 
 Drag-n-Drop an attribute to add it to the dashboard tab in the main view.
 
-![left_panel_drag-n-drop](images/left_panel_drag-n-drop.png)
+![left_panel_drag-n-drop](images/left_panel_drag-n-drop_new_DashB.png)
 
 __NOTE__ The difference between “Dashboard” and “Monitor tab” is that you can add any attribute of ANY device to the Dashboard, whereas in the “Monitor tab” you see all the attributes of one device.
 
@@ -270,7 +308,7 @@ You can “Read”, “Plot”, “Plot.Hist” and “Write”.
 
 _Exercise_: 
 ``` 
-Select “my_test_device”;
+Select “my_test”;
 select “double_scalar” attribute in the list of attributes;
 click “Plot”;
 in the text field next to “Write” button enter 100 and click “Write” button;
@@ -329,32 +367,82 @@ different buttons.
 ## 4 Right panel
 Displays user activity.
 
-![rigth_panel_user_log](images/rigth_panel_user_log.png)
+![rigth_panel_user_log_new_Dashb](images/rigth_panel_user_log_new_Dashb.png)
 
 ## 5 Main view
 
 ### 5.1 Dashboard tab
-It has the same purpose as Device monitor, except that attributes can be
-added here manually from different devices.
+In this tab you can create different scalar dashboards of two types:
+table and plot.
 
-At first it has two tabs - Scalar and Plot. But when you suggested to
-monitor or configure device, for example, new tabs will be added.
+#### 5.1.1 Table dashboard
+*To create a table dashboard* press "+" button to open/close panel. In
+the "Name" field put name of your future dashboard and choose "table" in
+the "Type" drop-down list. Click on save icon
+![icon_save](images/icon_save.png)
+to create this dashboard.
+
+![dashB_table_create](images/dashB_table_create.png)
+
+Drag-n-drop desired attributes from any device to fill dashboard.
+
+![dashB_table_add_attr](images/dashB_table_add_attr.png)
+
+Click on the settings icon in the right bottom corner to show/hide
+settings panel and delete attributes from the table.
+
+![dashB_table_settings](images/dashB_table_settings.png)
+
+When you click on the value of attribute you can change the value either
+in the table or dedicated panel which appears on click.
+dashB_table_change_attr_panel
+![dashB_table_change_attr_panel](images/dashB_table_change_attr_panel.png)
+
+In fact this table dashboard has the same purpose as Device monitor,
+except that scalar attributes can be added here manually from different
+devices and you can create several dashboards with different pack of
+attributes.
+
+#### 5.1.2 Plot dashboard
+
+*To create a plot dashboard* click on the "+" icon if the dedicated
+panel is closed. Change or put name of the future dashboard and select
+"plot" type.
+
+![dashB_plot_create](images/dashB_plot_create.png)
+
+Drag-n-drop desired attributes from any device to fill dashboard.
+
+If you want to delete attribute from the plot, click on "settings"
+button. icon_run To start plotting click on "play"
+![icon_run](images/icon_run.png)
+icon. You can also change an update rate (in milliseconds). Write needed
+update rate and press ![icon_update](images/icon_update.png) 
+
+![dashB_plot_tab](images/dashB_plot_tab.png)
+
 
 Plots are powered by plotly.js. Please refer to
 [plotly documentation](https://plot.ly/plotly-js-scientific-d3-charting-library)
 
-![main_view_dashboard](images/main_view_dashboard.png)
-
 
 _Exercise_: 
 ```
-Open “my_test_device” in Device tree. 
-Choose “Double Scalar” in Attributes and add it to Dashboard. 
-To plot the scalar attribute click on the plot icon.
+Open “my_test” in Device tree. 
+Choose “Double Scalar” in Attributes and add it to the newly created Table dashboard. 
+Add “Double Scalar” in Attributes to the newly created Plot table.
 Select attribute “short_image_ro” and add it to monitor. 
-Select “double_spectrum_ro” and add it to Dashboard. 
+Select “double_spectrum_ro” and add it to Table dashboard. 
 Refresh the page
 ```
+
+To switch between dashboards click on the Profile drop-down list. 
+
+![dashB_switch_between_dashB](images/dashB_switch_between_dashB.png)
+
+
+__NOTE__ _To plot non scalar attribute double click on it in._
+
 
 ### 5.2 Device monitor
 
@@ -362,7 +450,7 @@ Right click on the device in Devices tree widget and context menu
 appears. Clicking on "Monitor" item of the menu, monitor tab opens in
 the main view. The opened tab has the name of the monitored device.
 
-![main_view_monitor](images/main_view_monitor.png)
+![main_view_monitor](images/main_view_monitor_without_delete.png)
 
 Here you monitor _all_ device's attributes. The tab contains attributes'
 monitor view widget with:
@@ -407,7 +495,7 @@ __NOTE__ _To start plotting use Start button in toolbar._
 
 _Exercise_: 
 ```
-Go “sys” → “tg_test” → “my_test_device”.
+Go “sys” → “tg_test” → “my_test”.
 Choose “Monitor” from the context menu.
 ```
 
@@ -434,18 +522,20 @@ device.
 
 Configuration tab contains properties, polling, events, attributes configuration and logging tabs which in their turn have their own tabs.
 
-For example, in the properties tab you can add, refresh, apply, delete property. Click on the value and you can change it. 
+For example, in the properties tab you can add, refresh, apply, delete
+property. Click on the value and you can change it. Press "Apply" to
+save the changes.
 
 Here you can also set the validity of attribute to make it
 highlighted while monitoring.
 
-![main_view_configure](images/main_view_configure.png)
+![main_view_configure](images/main_view_configure_without_delete.png)
 
 The rest tabs work the same way. 
 
 _Exercise_: 
 ```
-Go “sys” → “tg_test” → “my_test_device”.
+Go “sys” → “tg_test” → “my_test”.
 Choose “Configure” from the context menu.
 ```
 
