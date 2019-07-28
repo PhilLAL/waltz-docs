@@ -1,12 +1,19 @@
 [TOC]
 
-Before deepening into Waltz , please, note a list of very simple actions, but they really worth doing while using web-applications:
+***
 
-  * Redo last actions
-  
-  * Refresh the page
-  
-  * Refresh the page with cache drop (CTRL+F5) 
+Before deepening into Waltz , please, note a list of very simple
+actions. 
+
+They really worth doing while using web-applications: 
+
+ | 1 | *Redo last actions*                          | 
+ | 2 | *Refresh the page*                           | 
+ | 3 | *Refresh the page with cache drop (CTRL+F5)* |
+
+
+***
+
 
 # User guide
 
@@ -22,8 +29,7 @@ The application consists of 5 parts:
 
 2. The bottom toolbar; 
 
-3. Left panel with Devices tree widget (the root is the REST API server
-   name) with filter by text, Device's Control Widget with filter by
+3. Left panel with Devices tree widget (the root is the REST API server name) with filter by text, Device's Control Widget with filter by
    text, Description widget and Toolbar.
 
 4. Right panel (collapsed by default) - User's actions log;
@@ -103,8 +109,9 @@ in the left panel to see information about it in this table.
 date, time and action.
 
 #### 1.1.3 Terminal
-A tab with Terminal will allow you to have a fully functional linux
-terminal.
+A tab with Terminal will allow you to have a fully functional Linux terminal.
+
+![tab_ternimal](images/tab_ternimal.png)
 
 ### 1.2 User's name 
 
@@ -165,11 +172,8 @@ On the left — REST API request status (shows current request to the Tango REST
  - done — response from Tango REST Server have been successfully received;
  - failed — no response or it has an error.
 
-On the right bottom corner you will find 
- 
- - application log ![log_icon_errors](images/log_icon_errors.png)
- - “report an issue or bug” button - link to Waltz GitHub repository
-     ![icon_github](images/icon_github.png)
+On the right bottom corner you will find application log
+![log_icon_errors](images/log_icon_errors.png)
 
 ## 3 Left panel
 Consists of 4 parts: 
@@ -246,24 +250,24 @@ the device's control widget.
 Here you can:
  
 - See device's attributes, commands and pipes;
-- Drag-n-Drop Attributes to the Dashboard;
+- Drag-n-drop Attributes to the Dashboard;
 - Click on attribute or command or pipe to select it for editing;
 - Double click on attribute or command or pipe to expand description
   widget;
 - Search in Search box which filters all three device child entity types
   simultaneously. __a:__ shows only attributes; __c:__ -- commands; __p:__ -- pipes.
 
-__NOTE__ if you get the following error, this means that Tango device is
-not exported:
+__NOTE__ _If you get the following error, this means that Tango device is not exported:_
 
 > Reason: TangoProxyException Description: Failed to get proxy for tango://hzgxenvtest.desy.de:10000/development/camel/0:ProxyException in Failed to apply creation policy for proxy development/camel/0 PANIC: TangoApi_DEVICE_NOT_EXPORTED development/camel/0 Not Exported ! Connection(development/camel/0) ERR: TangoApi_CANNOT_IMPORT_DEVICE Cannot import development/camel/0 Connection.build_connection(development/camel/0)[Failed to apply creation policy for proxy development/camel/0:TangoApi_DEVICE_NOT_EXPORTED[development/camel/0 Not Exported !]] Origin: org.tango.web.server.TangoProxyPool.getProxy(TangoProxyPool.java:74)
  
 
-Drag-n-Drop an attribute to add it to the dashboard tab in the main view.
+Drag-n-drop an attribute to add it to the dashboard tab in the main view.
 
 ![left_panel_drag-n-drop](images/left_panel_drag-n-drop_new_DashB.png)
 
-__NOTE__ The difference between “Dashboard” and “Monitor tab” is that you can add any attribute of ANY device to the Dashboard, whereas in the “Monitor tab” you see all the attributes of one device.
+__NOTE__ _The difference between “Dashboard” and “Monitor tab” is that you can add any attribute of ANY device to the Dashboard, whereas in
+the “Monitor tab” you see all the attributes of one selected device._
 
 
 _Exercise_: 
@@ -282,7 +286,8 @@ device.
 In Device's Controls widget it is also possible to control attributes,
 commands and pipes. All controls widgets have: 
 
-- ![icon_eye](images/icon_eye.png) - opens description of the chosen item;
+- ![icon_eye](images/icon_eye.png)
+  \- opens **description** of the chosen item;
 - ![icon_info](images/icon_info.png) - opens a new tab with **toolbar** in the main view with
    functionality corresponding to the selectied item (attribute, command or pipe). 
    
@@ -290,7 +295,7 @@ This Toolbar has the following controls:
 
 * Number – a refresh/execute rate (milliseconds);
 * Refresh button – set a new value of  refresh rate;
-* Pause or Start button – to pause or strart refreshing/executing.
+* Pause or Start button – to pause or start refreshing/executing.
 
 #### 3.2.1 Attribute's control
 You can “Read”, “Plot”, “Plot.Hist” and “Write”. 
@@ -342,9 +347,8 @@ will be opened. In this new tab it is possible to write a new value as
 
 
 ### 3.3 Description widget
-Contains readonly information. Been automatically updated when click on
-the name of Tango host (values are loaded from the REST server), device
-or attribute, command or pipe.
+Contains read-only information. Been automatically updated when click on the name of Tango host (values are loaded from the REST server),
+device or attribute, command or pipe.
 
 ![left_panel_description](images/left_panel_description.png)
 
@@ -395,7 +399,7 @@ settings panel and delete attributes from the table.
 
 When you click on the value of attribute you can change the value either
 in the table or dedicated panel which appears on click.
-dashB_table_change_attr_panel
+
 ![dashB_table_change_attr_panel](images/dashB_table_change_attr_panel.png)
 
 In fact this table dashboard has the same purpose as Device monitor,
@@ -413,11 +417,8 @@ panel is closed. Change or put name of the future dashboard and select
 
 Drag-n-drop desired attributes from any device to fill dashboard.
 
-If you want to delete attribute from the plot, click on "settings"
-button. icon_run To start plotting click on "play"
-![icon_run](images/icon_run.png)
-icon. You can also change an update rate (in milliseconds). Write needed
-update rate and press ![icon_update](images/icon_update.png) 
+If you want to delete attribute from the plot, click on "settings" button. To start plotting click on "play" ![icon_run](images/icon_run.png)
+icon. If you want change an update rate (in milliseconds), write the needed update rate and press ![icon_update](images/icon_update.png)
 
 ![dashB_plot_tab](images/dashB_plot_tab.png)
 
@@ -441,7 +442,7 @@ To switch between dashboards click on the Profile drop-down list.
 ![dashB_switch_between_dashB](images/dashB_switch_between_dashB.png)
 
 
-__NOTE__ _To plot non scalar attribute double click on it in._
+__NOTE__ _To plot non-scalar attribute double click on it in._
 
 
 ### 5.2 Device monitor
@@ -456,7 +457,7 @@ Here you monitor _all_ device's attributes. The tab contains attributes'
 monitor view widget with:
 
 * Status bar, 
-* Scalars tab with scalars's data table, 
+* Scalars tab with scalar's data table, 
 * Plot tab with view of scalars,
 * Spectrum tabs, 
 * Image tabs and 
@@ -469,9 +470,9 @@ you can plot them clicking on the plot icon
 (![icon_plot](images/icon_plot.png)). This plot will be shown in the _Plot tab_. To delete the plot just
 click on the cross of the related attribute in the Scalars data table.
 
-There is also possibility to configure columns of the Scalars tab by
-clicking on ![icon_scalars_table_configuration](images/icon_scalars_table_configuration) in the toolbar, select the desired columns in the
-appeared box and click "Apply" button.
+There is also possibility to configure columns of the Scalars table by clicking on the "settings" icon
+![icon_scalars_table_configuration](images/icon_scalars_table_configuration.png)
+in the toolbar, select the desired columns in the appeared box and click "Apply" button.
 
 Attributes in Scalar's data table may be highlighted depending on
 attribute quality set in Tango (“warning” or “alarm”). You can set these
@@ -491,7 +492,7 @@ Plots are powered by plotly.js. Please, refer to
 
 __NOTE__ _Values are updated only if visible._
 
-__NOTE__ _To start plotting use Start button in toolbar._
+__NOTE__ _To start plotting use "start" button in toolbar._
 
 _Exercise_: 
 ```
