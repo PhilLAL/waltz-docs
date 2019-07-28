@@ -7,10 +7,9 @@ actions.
 
 They really worth doing while using web-applications: 
 
- | 1 | *Redo last actions*                          | 
- | 2 | *Refresh the page*                           | 
- | 3 | *Refresh the page with cache drop (CTRL+F5)* |
-
+- _Redo last actions_
+- _Refresh the page_
+- _Refresh the page with cache drop (CTRL+F5)_
 
 ***
 
