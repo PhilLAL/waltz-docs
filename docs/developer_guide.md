@@ -1,3 +1,5 @@
+> **WARNING**: This part of the documentation is out of date and corresponds to Waltz v0.6.x! Please feel free to contribute.
+
 [TOC]
 
 We shall start this developer guide with a super short introduction to the basic web technologies which are used in Waltz. 

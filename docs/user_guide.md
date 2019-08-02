@@ -51,7 +51,7 @@ On the left it contains the following menu items:
 ### 1.1 "Tools" menu
 
 #### 1.1.1 Scripting tab
-You can write and execute javascripts here. 
+You can write and execute javascript here. 
 
 ![tab_scripting](images/tab_scripting.png)
 
@@ -74,11 +74,12 @@ Press “ctrl+enter” to execute the script or click execute button
 ```
 Script name: readAttribute
 Script code:
-return PlatformContext.rest.fetchHost('localhost:10000')
-  .then(host => host.fetchDevice('sys/tg_test/1'))
-  .then(device => device.fetchAttr('double_scalar'))
-  .then(attr => attr.read())
-  .then(value => value.value)
+const host = await PlatformContext.rest.fetchHost('localhost:10000');
+const device = await host.fetchDevice('sys/tg_test/1');
+const attr = await device.fetchAttr('double_scalar');
+const attr_value = await attr => attr.read();
+return  value.value;
+
 Press “ctrl+enter” to execute the script
 ```
 
@@ -92,15 +93,15 @@ Servers appear, click on Tango Host in the tree from the left panel or
 on Tango Host above *Tango Severs* label.
 
 -  Kill button — kills selected server (sends "kill-9");
--  Stop button — stops selected server (uses "Starter" command);
--  Start button — starts selected server (uses "Starter" command).
+-  Stop button — stops selected server (uses [Starter](https://tango-controls.readthedocs.io/en/latest/administration/deployment/starter.html)'s "DevStop" command);
+-  Start button — starts selected server (uses [Starter](https://tango-controls.readthedocs.io/en/latest/administration/deployment/starter.html)'s "DevStart" command).
 
 All *Tango Devices* are available under "Tango Devices" after selection
 of Tango Server. It is also possible to add, update or delete device
 using a dedicated box right under the "Tango Devices" label. Place
 holders in fields will help you to add a new device in correct way.
 
-*Selected Device info* shows all available information on the device. It
+*Selected Device info* shows information on the device. It
 updates on click. You may also choose device from the Tango device tree
 in the left panel to see information about it in this table.
 
@@ -111,6 +112,8 @@ date, time and action.
 A tab with Terminal will allow you to have a fully functional Linux terminal.
 
 ![tab_ternimal](images/tab_ternimal.png)
+
+In the screenshot above user executes *htop* program on a remote Linux host.
 
 ### 1.2 User's name 
 
@@ -133,9 +136,9 @@ You can add new device(s) here.
 _Exercise_: 
 ```
 Set 
-ServerName/Instance: TangoTest/test
+ServerName/Instance: TangoTest/sys
 Class name: TangoTest
-Devices: test/tg_test/x;  test/tg_test/y
+Devices: sys/tg_test/x;  sys/tg_test/y
 ```
 
 You have just added it to the database. The newly added devices are not running. You should start manually.
@@ -241,8 +244,7 @@ Right click on the device to open a __context menu__:
 As soon as a device in the Devises' tree is chosen the device's control
 widget is updated.
  
-_Hint:_ Double click on the device in the Devices tree and you can see
-the device's control widget.
+> _Hint:_ Double click on the device in the Devices tree opens the device's control widget.
 
 ![left_panel_devices_widget](images/left_panel_devices_widget.png)
 
@@ -363,7 +365,7 @@ different buttons.
   \- save button appears when you are in the Description button
 - ![icon_eye](images/icon_eye.png)
   \-  monitor button, works the same as Device monitor
-- ![icon_configure](images/icon_configure.png)
+- ![icon_cPlots are powered by plotly.js. Please refer to plotly documentation to get use of it: [link](https://plot.ly/plotly-js-scientific-d3-charting-library)onfigure](images/icon_configure.png)
   \- configuration button, works the same as Device configuration
   
 
@@ -422,8 +424,7 @@ icon. If you want change an update rate (in milliseconds), write the needed upda
 ![dashB_plot_tab](images/dashB_plot_tab.png)
 
 
-Plots are powered by plotly.js. Please refer to
-[plotly documentation](https://plot.ly/plotly-js-scientific-d3-charting-library)
+
 
 
 _Exercise_: 
@@ -435,6 +436,26 @@ Select attribute “short_image_ro” and add it to monitor.
 Select “double_spectrum_ro” and add it to Table dashboard. 
 Refresh the page
 ```
+
+#### 5.1.3 List dashboard
+
+It has the same purpose as [Device monitor](user_guide.md#52-device-monitor), except that attributes can be added here manually from different devices.
+You can add any attributes from any devices to the List drag-n-droping from Device widget.
+
+![5.1.3_dashboard_list](images/4_dashboard_list.png)
+
+_Exercise_: 
+```
+Open “my_test_device” in Device tree. 
+Choose “Double Scalar” in Attributes and add it to Dashboard using context menu. 
+To plot the scalar attribute click on the plot icon.
+Select attribute “short_image_ro” and add it to monitor using context menu. 
+Select “double_spectrum_ro” and add it to Dashboard using context menu. 
+Refresh the page
+``` 
+
+Plots are powered by plotly.js. Please refer to
+[plotly documentation](https://plot.ly/plotly-js-scientific-d3-charting-library)
 
 To switch between dashboards click on the Profile drop-down list. 
 
