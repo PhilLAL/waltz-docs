@@ -914,6 +914,19 @@ Waltz_code_JSDoc.png
 
 Waltz_code_platformAPI_StatefulMixin.png
 
+## How to...
+
+Update stored UserContext
+
+```bash
+$> cd ${USER_CONTEXT_DATA}
+$> cp p05user p05user.bak
+$> base64 --decode p05user
+$> {EDIT UserContext}
+$> nano p05user.json
+$> curl -X POST -d "id=p05user&data=`base64 p05user.json`" https://hzgxenvtest.desy.de:8443/user-context/cache
+```
+
 ## Resources
 
 [1] [Exploring JS](http://exploringjs.com/)
