@@ -257,6 +257,8 @@ Here you can:
   widget;
 - Search in Search box which filters all three device child entity types
   simultaneously. __a:__ shows only attributes; __c:__ -- commands; __p:__ -- pipes.
+  
+![Device panel filter](images/device_ctrl_filter.gif)  
 
 __NOTE__ _If you get the following error, this means that Tango device is not exported:_
 
