@@ -3,7 +3,7 @@ site_url: https://github.com/tango-controls/waltz
 repo_url: https://github.com/tango-controls-waltz/waltz-docs
 
 theme:
-    name: flatly
+    name: bootstrap
 
 pages:
 - Home: index.md
