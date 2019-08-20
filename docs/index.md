@@ -33,7 +33,7 @@ Waltz is a combined effort of:
 
 <a href="https://tango-controls.org"><img src="images/tango_in_color.png" style="background-color: transparent; height: auto; float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;" data-recalc-dims="1"></a>
 
-<a href="https://tango-controls.org"><img src="images/hzg_rgb_mitzusatz_in_e_300dpi.png" style="background-color: transparent; height: auto; float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;" data-recalc-dims="1"></a>
+<a href="https://hzg.de"><img src="images/hzg_rgb_mitzusatz_in_e_300dpi.png" style="background-color: transparent; height: auto; float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;" data-recalc-dims="1"></a>
 
-<a href="https://tango-controls.org"><img src="images/logo_ik.png" style="background-color: transparent; height: auto; max-float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;" data-recalc-dims="1"></a>
+<a href="https://ingvord.ru"><img src="images/logo_ik.png" style="background-color: transparent; height: 30%; max-float: left; width: auto; margin-right: 1%; margin-bottom: 0.5em;" data-recalc-dims="1"></a>
 
