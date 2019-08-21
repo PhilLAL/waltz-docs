@@ -412,6 +412,8 @@ except that scalar attributes can be added here manually from different
 devices and you can create several dashboards with different pack of
 attributes.
 
+![TableWidget](images/table_widget.gif)
+
 #### 5.1.2 Plot dashboard
 
 *To create a plot dashboard* click on the "+" icon if the dedicated
