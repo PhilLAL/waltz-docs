@@ -3,7 +3,7 @@
 
 <a href="http://www.waltz-controls.space"><img src="images/logo_Waltz.png" style="background-color: transparent;" data-recalc-dims="1"></a>
 
-
+![Demo](images/demo.gif)
 
 A general purpose Tango web application that provide the interface between the Tango control system and the scientific users who define and calibrate their experiments. It first had a name of TangoWebapp but on the Tango Users Meeting 32 during the voting it gained its name as Waltz. So if you find something about TangoWebapp just know that it is the same project.
 
