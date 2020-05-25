@@ -2,6 +2,8 @@
 
 ## Developing a waltz widget with UI
 
+> **Sample project:** [hzg-wpi/beamtimedb-waltz-plugin](//github.com/hzg-wpi/beamtimedb-waltz-plugin)
+
 1. Generate a new repo from [waltz-controls/waltz-webpack-plugin](//github.com/waltz-controls/waltz-webpack-plugin)
       - one may want to fork the repo into your organization first
 2. Replace all XXX occurances in `package.json`, `README.md`
