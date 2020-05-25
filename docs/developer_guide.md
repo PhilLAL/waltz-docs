@@ -1,8 +1,8 @@
 <a href="https://github.com/tango-controls/waltz"><img width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_green_007200.png?resize=149%2C149" style="background-color: transparent; position: fixed; top: 30px; right: 0; border: 0;" alt="Fork me on GitHub" data-recalc-dims="1"></a>
 
-## Developing a waltz widget
+## Developing a waltz widget with UI
 
-1. Generate a new repo from waltz-controls/waltz-node-plugin
+1. Generate a new repo from [waltz-controls/waltz-webpack-plugin](//github.com/waltz-controls/waltz-webpack-plugin)
       - one may want to fork the repo into your organization first
 2. Replace all XXX occurances in `package.json`, `README.md`
       - one may need to adjust GitHub organizations as well e.g. `@waltz-controls` -> `@my-org` (also in `.npmrc`)
@@ -11,7 +11,7 @@
 5. Generate documentation ... basically do normal development cycles
 5. Build, package and publish:
       - `npm run clean`
-      - `npm run build`
+      - `npm run module`
       - `npm publish`
       - `git tag {version} & git push --tags`
 6. Integrate new widget/plugin into Waltz:
