@@ -1,6 +1,10 @@
 <a href="https://github.com/tango-controls/waltz"><img width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_green_007200.png?resize=149%2C149" style="background-color: transparent; position: fixed; top: 30px; right: 0; border: 0;" alt="Fork me on GitHub" data-recalc-dims="1"></a>
 
-## Developing a waltz widget with UI
+## Waltz developer guide
+
+> This section is for **Waltz 1.0.0+**
+
+### Developing a waltz widget with UI
 
 > **Sample project:** [hzg-wpi/beamtimedb-waltz-plugin](//github.com/hzg-wpi/beamtimedb-waltz-plugin)
 
@@ -29,8 +33,6 @@
       - build and deploy
 
 
-
-> **WARNING**: This part of the documentation is out of date and corresponds to Waltz v0.6.x! Please feel free to contribute.
 
 [TOC]
 
@@ -82,6 +84,8 @@ So putting it all together, we get the following diagram:
 
 
 ## Waltz
+
+> **WARNING**: This part of the documentation is out of date and corresponds to Waltz v0.6.x! Please feel free to contribute.
 
 From the developer point of view it is important to understand the following: Waltz per se is a web application built on top of WaltzPlatform. WaltzPlatform is a framework for Tango web applications (the framework may be extended to non-Tango applications as well, see architecture).
 
