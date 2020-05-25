@@ -39,14 +39,11 @@
       - integrate your widget/plugin i.e. in `main.js`
       - build and deploy
 
-
-
-[TOC]
+## Short introduction to the basics of Web
 
 We shall start this developer guide with a super short introduction to the basic web technologies which are used in Waltz. 
 If you don't need this, please, skip this part and go directly to the Waltz description.
 
-## Short introduction to the basics of Web
 Let's start with Client-Server architecture which looks like this at the first glance.
 
 ![devGuide_intro_client-serv_1](images/devGuide_intro_client-serv_1.png)
