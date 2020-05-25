@@ -9,6 +9,12 @@
 2. Replace all XXX occurances in `package.json`, `README.md`
       - one may need to adjust GitHub organizations as well e.g. `@waltz-controls` -> `@my-org` (also in `.npmrc`)
 3. Add you code into `src`
+      - `src/index.js` can be used to define plugin exports only e.g. constants, re-export classes from other source files etc
+         ```js
+         //./src/index.js
+         export const kMyConstant = 'some constant';
+         export {MyWidget} from 'src/widget/my';
+         ```
 4. Add some tests
 5. Generate documentation ... basically do normal development cycles
 5. Build, package and publish:
