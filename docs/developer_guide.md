@@ -4,6 +4,13 @@
 
 > This section is for **Waltz 1.0.0+**
 
+1. `npm install` may require authorization ([How to setup GitHub npm](https://help.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-npm-for-use-with-github-packages))
+      - add github npm registry to `~/.npmrc`:
+        ```
+        //npm.pkg.github.com/:_authToken={YOUR_GITHUB_AUTH_TOKEN}
+        ```
+        
+
 ### Developing a waltz widget with UI
 
 > **Sample project:** [hzg-wpi/beamtimedb-waltz-plugin](//github.com/hzg-wpi/beamtimedb-waltz-plugin)
