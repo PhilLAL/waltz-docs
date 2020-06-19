@@ -65,11 +65,8 @@ _“Scripts” - list of javascript files you have.
 
 If you want to create a new javascript file, type the name of your future file in _“Script name” field_ and your code in _“Script code”_ box. When click on run button ![icon_run](images/1.0.x/icon_run.png) in the left bottom your script is automatically saved but you must fill _Script name_ first! No need to click on save button ![icon_save](images/1.0.x/icon_save.png) in this case.
 
-_“Script output”_ box shows the result of the scritp. 
+_“Script output”_ box shows the result of the scritp. Of course, you can delete your script clicking on ![icon_trash](images/1.0.x/icon_trash.png). To change the script – select the needed one from the “Scripts” block.
 
-Of course, you can delete your script clicking on ![icon_trash](images/1.0.x/icon_trash.png). 
-
-To change the script – select the needed one from the “Scripts” block.
 
 Autocompletion will be enabled by Ctrl+Space. 
 
@@ -116,89 +113,30 @@ in the left panel to see information about it in this table.
 *Manager's Log* provides list of user's actions with servers showing
 date, time and action.
 
-#### 1.1.3 Terminal
-A tab with Terminal will allow you to have a fully functional Linux terminal.
-
-![tab_ternimal](images/tab_ternimal.png)
-
-In the screenshot above user executes *htop* program on a remote Linux host.
-
-### 1.2 User's name 
-
-#### 1.2.1 Settings tab
-
-![tab_settings](images/tab_settings.png)
-
-##### 1.2.1.1 Tango REST API URL
-
-Url of REST API entry point. Usually the correct value is set during the deployment so usually you don't need to change it. But it is possible to add new REST API hosts (will rewrite the existing one).
-
-##### 1.2.1.2 Tango hosts
-
-List of user's Tango hosts. You can delete or add Tango hosts here. Template for Tango host: {host}:{port}.
-
-##### 1.2.1.3 Tango Server Wizard
-
-You can add new device(s) here. 
-
-_Exercise_: 
-```
-Set 
-ServerName/Instance: TangoTest/sys
-Class name: TangoTest
-Devices: sys/tg_test/x;  sys/tg_test/y
-```
-
-You have just added it to the database. The newly added devices are not running. You should start manually.
-
-##### 1.2.1.4 Device filters
-
-In fact, there are 3 filters in the application. But two of them (in Devices tree widget and in Device Control Panel) are text filters and the one you have here allows you to combine.
-
-You can apply more complicated filters, define which devices will be available. Moreover, several filters can be run simultaneously. Type each of them on new line and press “Apply filters” button.
-
-To return to the full devices' tree apply: "*/*/*"
-
-![tab_settings_filter](images/tab_settings_filter.png)
-
-_Exercise_: 
-```
-Set
-sys/tg_test/*
-tango/*/*
-press “Apply”
-```
-
-#### 1.2.2 Sign out
-Use this for correct end of session and to prevent others from changing
-your settings and managing your hosts and devices.
+### 1.2 User's log out
+Use this for correct end of session and to prevent others from changing your settings and managing your hosts and devices.
 
 
 
-## 2 Bottom toolbar
-On the left — REST API request status (shows current request to the Tango REST Server). Can have the following states:
 
- - pending — the request is being sent but no response yet;
- - done — response from Tango REST Server have been successfully received;
- - failed — no response or it has an error.
+## 2 Left panel
+Consists of the following main parts: 
 
-On the right bottom corner you will find application log
-![log_icon_errors](images/log_icon_errors.png)
+1. Dashboard profiles;
 
-## 3 Left panel
-Consists of 4 parts: 
+2. Navigation Tree for hosts and devices with search box;
 
-1. Devices tree widget with search box;
+3. Device's Control with search box;
 
-2. Device's Control Widget with search box;
+4. Information and settings block.
 
-3. Description widget;
-
-4. Left panel toolbar.
+This panel can be added with the needed tabs for quich navigation. For example, when the Scripting is opened - a dedicated tab appeared in this panel.
 
 
+### 2.1 Dashboard profiles
 
-### 3.1 Devices tree widget
+
+### 2.2 Navigation Tree
 
 Shows all devices you have. In this widget you can configure device, monitor all its attributes and delete it, also filter by text.
 
@@ -238,16 +176,54 @@ If you click on the device, all the commands, attributes and pipes
 related to this device will be show in Device's Control Widget. The
 Device's Control Widget will be updated.
 
-#### 3.1.1 Context menu
 
-Right click on the device to open a __context menu__:
+#### 2.2.1 Settings tab
 
- - Configure - opens a new tab with device configuration;
- - Monitor – opens a new tab with all the device's attributes.
+![tab_settings](images/tab_settings.png)
 
-![left_panel_context_menu](images/left_panel_context_menu_without_delete.png)
+##### 2.2.1.1 Tango REST API URL
 
-### 3.2 Device's Control Widget
+Url of REST API entry point. Usually the correct value is set during the deployment so usually you don't need to change it. But it is possible to add new REST API hosts (will rewrite the existing one).
+
+##### 2.2.1.2 Tango hosts
+
+List of user's Tango hosts. You can delete or add Tango hosts here. Template for Tango host: {host}:{port}.
+
+##### 2.2.1.3 Tango Server Wizard
+
+You can add new device(s) here. 
+
+_Exercise_: 
+```
+Set 
+ServerName/Instance: TangoTest/sys
+Class name: TangoTest
+Devices: sys/tg_test/x;  sys/tg_test/y
+```
+
+You have just added it to the database. The newly added devices are not running. You should start manually.
+
+##### 2.2.1.4 Device filters
+
+In fact, there are 3 filters in the application. But two of them (in Devices tree widget and in Device Control Panel) are text filters and the one you have here allows you to combine.
+
+You can apply more complicated filters, define which devices will be available. Moreover, several filters can be run simultaneously. Type each of them on new line and press “Apply filters” button.
+
+To return to the full devices' tree apply: "*/*/*"
+
+![tab_settings_filter](images/tab_settings_filter.png)
+
+_Exercise_: 
+```
+Set
+sys/tg_test/*
+tango/*/*
+press “Apply”
+```
+
+
+
+### 2.3 Device's Control
 
 As soon as a device in the Devises' tree is chosen the device's control
 widget is updated.
@@ -308,7 +284,7 @@ This Toolbar has the following controls:
 * Refresh button – set a new value of  refresh rate;
 * Pause or Start button – to pause or start refreshing/executing.
 
-#### 3.2.1 Attribute's control
+#### 2.3.1 Attribute's control
 You can “Read”, “Plot”, “Plot.Hist” and “Write”. 
 
 * Read – shows info about the attribute;
@@ -332,7 +308,7 @@ click “Plot”;
 click “Plot.Hist”;
 ```
 
-#### 3.2.2 Command's control
+#### 2.3.2 Command's control
 To execute the command, first choose the command you need, then type the input value. 
 
 If there is an “Input” box, it shows what type of input value should be
@@ -351,46 +327,28 @@ _Exercise_:
 Select “DevDouble” enter 3.14 as input and press the “Execute” button
 ```
 
-#### 3.2.3 Pipe's control
+#### 2.3.3 Pipe's control
 It contains “Read” button. By clicking on it a new tab in the main view
 will be opened. In this new tab it is possible to write a new value as 
 [JSON](http://tango-rest-api.readthedocs.io/en/latest/device/#device-pipes).
 
 
-### 3.3 Description widget
+### 2.4 Information and settings block
 Contains read-only information. Been automatically updated when click on the name of Tango host (values are loaded from the REST server),
 device or attribute, command or pipe.
 
 ![left_panel_description](images/left_panel_description.png)
 
 
-### 3.4 Left panel toolbar 
-Depending on which widget of the Left panel you are, the toolbar has
-different buttons. 
 
-- ![icon_update](images/icon_update.png)
-  \- refresh button Devices tree and it is always presented in the
-  toolbar;
-- ![icon_save](images/icon_save.png)
-  \- save button appears when you are in the Description button
-- ![icon_eye](images/icon_eye.png)
-  \-  monitor button, works the same as Device monitor
-- ![icon_cPlots are powered by plotly.js. Please refer to plotly documentation to get use of it: [link](https://plot.ly/plotly-js-scientific-d3-charting-library)onfigure](images/icon_configure.png)
-  \- configuration button, works the same as Device configuration
-  
 
-## 4 Right panel
-Displays user activity.
+## 3 Main view
 
-![rigth_panel_user_log_new_Dashb](images/rigth_panel_user_log_new_Dashb.png)
-
-## 5 Main view
-
-### 5.1 Dashboard tab
+### 3.1 Dashboard tab
 In this tab you can create different scalar dashboards of two types:
 table and plot.
 
-#### 5.1.1 Table dashboard
+#### 3.1.1 Table dashboard
 *To create a table dashboard* press "+" button to open/close panel. In
 the "Name" field put name of your future dashboard and choose "table" in
 the "Type" drop-down list. Click on save icon
@@ -420,7 +378,7 @@ attributes.
 
 ![TableWidget](images/table_widget.gif)
 
-#### 5.1.2 Plot dashboard
+#### 3.1.2 Plot dashboard
 
 *To create a plot dashboard* click on the "+" icon if the dedicated
 panel is closed. Change or put name of the future dashboard and select
@@ -449,7 +407,7 @@ Select “double_spectrum_ro” and add it to Table dashboard.
 Refresh the page
 ```
 
-#### 5.1.3 List dashboard
+#### 3.1.3 List dashboard
 
 It has the same purpose as [Device monitor](user_guide.md#52-device-monitor), except that attributes can be added here manually from different devices.
 You can add any attributes from any devices to the List drag-n-droping from Device widget.
@@ -477,100 +435,15 @@ To switch between dashboards click on the Profile drop-down list.
 __NOTE__ _To plot non-scalar attribute double click on it in._
 
 
-### 5.2 Device monitor
+## 4 Right panel
+Displays user activity.
 
-Right click on the device in Devices tree widget and context menu
-appears. Clicking on "Monitor" item of the menu, monitor tab opens in
-the main view. The opened tab has the name of the monitored device.
+By clicking on a repeat button ![icon_repeat](images/1.0.x/icon_repeat.png) the described action will be done.
 
-![main_view_monitor](images/main_view_monitor_without_delete.png)
+## 5 Bottom toolbar
 
-Here you monitor _all_ device's attributes. The tab contains attributes'
-monitor view widget with:
-
-* Status bar, 
-* Scalars tab with scalar's data table, 
-* Plot tab with view of scalars,
-* Spectrum tabs, 
-* Image tabs and 
-* Toolbar. 
-
-_Status bar_ contains information about device. 
-
-Scalar attributes are listed in the _Scalars tab_ as a data table where
-you can plot them clicking on the plot icon
-(![icon_plot](images/icon_plot.png)). This plot will be shown in the _Plot tab_. To delete the plot just
-click on the cross of the related attribute in the Scalars data table.
-
-There is also possibility to configure columns of the Scalars table by clicking on the "settings" icon
-![icon_scalars_table_configuration](images/icon_scalars_table_configuration.png)
-in the toolbar, select the desired columns in the appeared box and click "Apply" button.
-
-Attributes in Scalar's data table may be highlighted depending on
-attribute quality set in Tango (“warning” or “alarm”). You can set these
-values using Waltz (Devices tree widget → context menu on the device →
-Configure → Attributes config → Alarms).
-
-Each Spectrum and Image attribute will have its own tab. Clicking on a spectrum you get the plot. 
-
-_Toolbar_ has the following controls on the left:
-
-* Number – refresh rate of attributes' values (milliseconds);
-* Refresh button – to set a new value of  refresh rate;
-* Start/Pause button – to start/pause refreshing.
-
-Plots are powered by plotly.js. Please, refer to
-[plotly documentation](https://plot.ly/plotly-js-scientific-d3-charting-library)
-
-__NOTE__ _Values are updated only if visible._
-
-__NOTE__ _To start plotting use "start" button in toolbar._
-
-_Exercise_: 
-```
-Go “sys” → “tg_test” → “my_test”.
-Choose “Monitor” from the context menu.
-```
-
-_Exercise_: 
-```
-Click on the plot icon of “Double Scalar” attribute.
-Click on the plot icon of “short_scalar” attribute.
-To stop plotting “Double Scalar” attribute click on “x” in the data table.
-Open “double_spectrum_ro”.
-Open “short_image_ro”.
-```
-
-_Exercise_: 
-```
-Set 3000 and press refresh button. 
-```
-
-### 5.3 Device configuration
-
-Right click on the device in Devices tree widget and context menu
-appears. Clicking on "Configure" item of the menu, device configuration
-tab (new tab in the main view) opens with the name of the configured
-device.
-
-Configuration tab contains properties, polling, events, attributes configuration and logging tabs which in their turn have their own tabs.
-
-For example, in the properties tab you can add, refresh, apply, delete
-property. Click on the value and you can change it. Press "Apply" to
-save the changes.
-
-Here you can also set the validity of attribute to make it
-highlighted while monitoring.
-
-![main_view_configure](images/main_view_configure_without_delete.png)
-
-The rest tabs work the same way. 
-
-_Exercise_: 
-```
-Go “sys” → “tg_test” → “my_test”.
-Choose “Configure” from the context menu.
-```
+On the right bottom corner you will find application's log and find out what's up with your application.
+![log_icon_errors](images/log_icon_errors.png)
 
 
 
