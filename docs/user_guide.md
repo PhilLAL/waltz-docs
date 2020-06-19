@@ -26,46 +26,52 @@ The application is secured with the login and pass. The credentials should be gi
 
 The application consists of 5 parts:
 
-1. Top toolbar;
+1. __Top toolbar__ with menu buttons (About, Scripting, Manager, New issue, Docs, Logout and 2 icons to hide left and right parts of the application);
 
-2. The bottom toolbar; 
+2. __Left part__ with several panels:
+      - Dashboard profiles (where you can create table, list or plot dashboards).
+      - Navigation Tree with hosts and devices (easy navigation plus filtering).
+      - Device’s panel (where you can find all its attributes, commands and pipes; use filter for quick search; apply commands to attributes and execute commands).
+      - Info panel (Shows info about the selected item in the navigation tree or device's panel. It gives possibility to change name, add alias, etc.).
 
-3. Left panel with Devices tree widget (the root is the REST API server name) with filter by text, Device's Control Widget with filter by
-   text, Description widget and Toolbar.
+3. __Main view__. Here is the place to look through the dashboards, watch plots, create and execute scripts and use manager.
 
-4. Right panel (collapsed by default) - User's actions log;
+4. __Right panel__ where user's actions are shown. You can also use button near action to repeat it.
 
-5. Main view with the Dashboard tab by default.
+5. __Bottom toolbar__ with log concole. 
 
 
-![panels](images/panels_without_delete_menu.png)
+![panels](images/1.0.x/overview.png)
 
 
 ## 1 Top toolbar
-On the left it contains the following menu items:
+It contains the following menu items:
 
--  User's name with "Settings" and "Sign out" subitems;
--  Tools with "Scripting", "Manager", "Terminal" subitems;
--  "Help" with links to "About", "User docs" and create a "New issue" in
-   GutHub.
+-  User's "Log out";
+-  Tools with "Scripting" and "Manager";
+-  "Help" with links to "About", "User docs" and create a "New issue" in GutHub;
+-  2 icons on the edges of the toolbar to hide, thus, tight and left panels of the application and get more space for the dashboards.
 
 
-### 1.1 "Tools" menu
+### 1.1 "Tools"
 
-#### 1.1.1 Scripting tab
+#### 1.1.1 Scripting
+
 You can write and execute javascript here. 
 
-![tab_scripting](images/tab_scripting.png)
+![scripting](images/1.0.x/scripting.png)
 
-_“Scripts” block_ shows the names of javascript files you have. 
+_“Scripts” - list of javascript files you have. 
 
-If you want to create a new javascript file, type the name of your future file in _“Script name” field_ and your code in _“Script code”_. When click on run button ![icon_run](images/icon_run.png) in the left bottom your script is automatically saved but you must fill _Script name_ first!
+If you want to create a new javascript file, type the name of your future file in _“Script name” field_ and your code in _“Script code”_ box. When click on run button ![icon_run](images/1.0.x/icon_run.png) in the left bottom your script is automatically saved but you must fill _Script name_ first! No need to click on save button ![icon_save](images/1.0.x/icon_save.png) in this case.
 
-The result of the scritp is shown in _“Script output”_ box. 
+_“Script output”_ box shows the result of the scritp. 
 
-Of course, you can delete your script clicking on ![icon_trash](images/icon_trash.png). 
+Of course, you can delete your script clicking on ![icon_trash](images/1.0.x/icon_trash.png). 
 
 To change the script – select the needed one from the “Scripts” block.
+
+Autocompletion will be enabled by Ctrl+Space. 
 
 _Exercise_: 
 ``` 
