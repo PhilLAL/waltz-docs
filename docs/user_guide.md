@@ -22,7 +22,7 @@ To start Waltz you should know the link to the application's entry point (e.g. h
 
 The application is secured with the login and pass. The credentials should be given by admin department.
 
-![login](images/login.png)
+![login](images/1.0.x/login.png)
 
 The application consists of 5 parts:
 
