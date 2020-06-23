@@ -187,24 +187,52 @@ You can use aliases to feel more comfortable with the
 names. To do this, please, refer to ![icon_info](images/1.0.x/icon_info.png) Information panel.
 
 If you click on the device, all the commands, attributes and pipes
-related to this device will be show in ![icon_device_control](images/1.0.x/icon_device_control.png) Device's Control Widget. The Device's Control Widget will be updated.
+related to this device will be show in ![icon_device_control](images/1.0.x/icon_device_control.png) Device's Control Widget.
 
 
 #### 2.2.1 Settings
 
-Navigation tree settings are located under the tree .
+Navigation tree settings are located under the tree. To show/hide the desired setting block click on a dedicated icon.
 
-##### 2.2.1.1 Tango REST API URL
+##### 2.2.1.1 Add/Delete Tango hosts
 
-Url of REST API entry point. Usually the correct value is set during the deployment so usually you don't need to change it. But it is possible to add new REST API hosts (will rewrite the existing one).
+You can delete or add hosts here. 
 
-##### 2.2.1.2 Tango hosts
+Put the name and port and add by clicking on "+" sign nereby.
 
-List of user's Tango hosts. You can delete or add Tango hosts here. Template for Tango host: {host}:{port}.
+To delete - select the host in the list and click on "-" sign infront of the selected item.
 
-##### 2.2.1.3 Tango Server Wizard
+![settings_navigation_tree_add_host](images/1.0.x/settings_navigation_tree_add_host.png)
 
-You can add new device(s) here. 
+##### 2.2.1.2 Hosts' DB information
+
+Select the host and information about its database will be shown.
+
+![settings_navigation_tree_host_info](images/1.0.x/settings_navigation_tree_host_info.png)
+
+##### 2.2.1.3 Devices' filters
+
+There is a text filter above the tree.
+
+You can apply more complicated filters and define which hosts or devices will be available. Moreover, several filters can be run simultaneously. Type each of them on a new line and press “Apply...” button.
+
+To return to the full devices' tree apply: "*/*/*"
+
+![settings_navigation_tree_filter](images/1.0.x/settings_navigation_tree_filter.png)
+
+_Exercise_: 
+```
+Set
+sys/tg_test/*
+tango/*/*
+press “Apply device filters...”
+```
+
+##### 2.2.1.4 Tango Server Wizard
+
+A new device(s) can be added here. By clicking on "Create ..." button, a newly created device is added to the database.
+
+![settings_navigation_tree_devices_wizard](images/1.0.x/settings_navigation_tree_devices_wizard.png)
 
 _Exercise_: 
 ```
@@ -214,25 +242,6 @@ Class name: TangoTest
 Devices: sys/tg_test/x;  sys/tg_test/y
 ```
 
-You have just added it to the database. The newly added devices are not running. You should start manually.
-
-##### 2.2.1.4 Device filters
-
-In fact, there are 3 filters in the application. But two of them (in Devices tree widget and in Device Control Panel) are text filters and the one you have here allows you to combine.
-
-You can apply more complicated filters, define which devices will be available. Moreover, several filters can be run simultaneously. Type each of them on new line and press “Apply filters” button.
-
-To return to the full devices' tree apply: "*/*/*"
-
-![tab_settings_filter](images/tab_settings_filter.png)
-
-_Exercise_: 
-```
-Set
-sys/tg_test/*
-tango/*/*
-press “Apply”
-```
 
 
 
