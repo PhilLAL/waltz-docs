@@ -153,27 +153,28 @@ To delete a dashboard – choose it and hit “basket” button.
 
 ### 2.2 Navigation Tree
 
-Shows all devices you have. In this widget you can configure device, monitor all its attributes and delete it, also filter by text.
+Shows all hosts and devices you have in a tree view. When you click on the tree element, ![icon_info](images/1.0.x/icon_info.png) Info panel is updated. In case of device – ![icon_info](images/1.0.x/icon_info.png) Info panel and ![icon_device_control](images/1.0.x/icon_device_control.png) Device’s Control panel are updated. 
 
-The devices tree widget has the following structure:
+Search box helps to filter the whole tree.
 
-![icon_host](images/icon_host.png) — Tango host (in this application it is a container of devices);
+![navigation_tree](images/1.0.x/navigation_tree.png)
 
-![icon_aliases](images/icon_aliases.png) — devices aliases (in this application it is a container of devices);
 
-![icon_domain](images/icon_domain.png) — domains, catalog of families within one tango host;
+The Navigation tree widget has the following structure:
 
-![icon_family](images/icon_family.png) — family - catalog of devices;
+![icon_host](images/1.0.x/icon_host.png) — host (a container of devices);
+
+![icon_alias](images/1.0.x/icon_alias.png) — aliases - list devices for which aliases were created;
+
+![icon_folder](images/1.0.x/icon_folder.png) — catalog of devices;
  
-![icon_device](images/icon_device.png) — device.
+![icon_device](images/1.0.x/icon_device.png) — device.
 
 _Exercise_: 
 ```
 Expand “development”, “sys” → “tg_test”.
 ```
 
-
-Search box in Devices tree widget filters the whole tree.
 
 _Exercise_: 
 ```
@@ -182,19 +183,16 @@ Delete “tg” in filter box.
 ```
 
 
-You can use aliases instead of members to feel more comfortable with the
-names. To do this, please, refer to Description widget.
-
-![left_panel_alias](images/left_panel_alias.png)
+You can use aliases to feel more comfortable with the
+names. To do this, please, refer to ![icon_info](images/1.0.x/icon_info.png) Information panel.
 
 If you click on the device, all the commands, attributes and pipes
-related to this device will be show in Device's Control Widget. The
-Device's Control Widget will be updated.
+related to this device will be show in ![icon_device_control](images/1.0.x/icon_device_control.png) Device's Control Widget. The Device's Control Widget will be updated.
 
 
-#### 2.2.1 Settings tab
+#### 2.2.1 Settings
 
-![tab_settings](images/tab_settings.png)
+Navigation tree settings are located under the tree .
 
 ##### 2.2.1.1 Tango REST API URL
 
