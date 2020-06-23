@@ -135,22 +135,43 @@ This panel can be added with the needed tabs for quick navigation. For example, 
 
 
 ### 2.1 Dashboard profiles
-It is the place where table, plot or list dashboard can be created.
+It is the place where table, plot or list dashboard can be created. Attributes can be added to the dashboards from different devices,so you can create several dashboards with different pack of attributes.
 
 ![dashboard](images/1.0.x/dashboard.png)
 
-Create a dashboard by clicking on “+”, choose the type (table, list or plot) and put the name. Make sure to hit V button, thus, save the newly created dashboard. Choose device from the Navigation tree and open devices control panel (also possible to open it by double clicking on the device in the tree). Drag-n-drop desired attributes form one/different devices to the dashboard to monitor.
+Create a dashboard by clicking on “+”, choose the type (table, list or plot) and put the name. Make sure to hit "V" button, thus, save the newly created dashboard. Choose device from the Navigation tree and open devices control panel (also possible to open it by double clicking on the device in the tree). To delete a dashboard – choose it and hit “basket” button.
 
-__Table__ – the first column is filled with unique devices’ names, other columns have attribute names as headers. Drag-n-drop an attribute form different devices if needed and it will add a new column to the table if there is no column with such attribute’s name and add new line if there has been no such device in the table yet.
+Drag-n-drop desired attributes form one/different devices to the dashboard from Device's control panel.
+
+When click on the value of attribute in the dashboard, the value can be changed.
+
+Each dashboard has a toolbar with the following controls:
+
+* Refresh button – set a new value of  refresh rate;
+* Pause or Start button – to pause or start refreshing/executing;
+* Number – a refresh/execute rate (milliseconds).
+
+To switch between dashboards, click on the dashboard name in Dashboard profiles panel.
+
+#### 2.1.1 Table 
+Table bashboard - the first column of the table is filled with unique devices’ names, other columns have attribute names as headers. Drag-n-drop an attribute form different devices if needed and it will add a new column to the table if there is no column with such attribute’s name and add new line if there has been no such device in the table yet.
 Use control underneath the table (hit “gear” button to show/hide it) to delete the column or freeze the table to avoid changes.
 
-__List__ – a list of attributes form one/different devices to monitor. Drag-n-drop attribute to add to the list table. It has fixed number of columns which can be hidden/shown (hit “gear” button underneath the table for these settings).
+![TableWidget](images/table_widget.gif)
 
-__Plot__ – dashboard where different attributes from one/different devices can be plotted together. If you want to delete an attribute – use control (“gear” button).
 
-To start updating attribute’s values – hit “arrow” button.
+#### 2.1.2 List
+A list of attributes form one/different devices to monitor. Drag-n-drop attribute to add to the list table. It has fixed number of columns which can be hidden/shown (hit “gear” button underneath the table for these settings).
 
-To delete a dashboard – choose it and hit “basket” button.
+#### 2.1.3 Plot
+Dashboard where different attributes from one/different devices can be plotted together. If you want to delete an attribute – use control (“gear” button).
+
+Plots are powered by plotly.js. Please refer to
+[plotly documentation](https://plot.ly/plotly-js-scientific-d3-charting-library)
+
+To start plotting click on "play" ![icon_play](images/1.0.x/icon_play.png) icon. If you want change an update rate (in milliseconds), write the needed update rate and press ![icon_update](images/1.0.x/icon_update.png)
+
+
 
 
 
@@ -249,7 +270,11 @@ Devices: sys/tg_test/x;  sys/tg_test/y
 
 ### 2.3 Device's Control
 
-Choose the device from the navigation tree and see all device’s attributes, commands and pipes in this panel.
+Choose the device from the navigation tree and see all device’s attributes, commands and pipes in this panel. 
+
+> _Hint:_ Double click on the device in the Navigation tree opens the device's control panel.
+
+Click on attribute, command or pipe opens/hides setting.
 
 Here you can:
  
@@ -261,8 +286,8 @@ Here you can:
  
  __Filter__ will help to find the necessary one. Drop down list with special symbols (“a:” - for attribute; “c:” - for command; “p:” - for pipes) will help to search only in the selected category and hide others (e.g. in case of “a:” - command and pipes will be hidden and the filter will the applied for attributes only).
  
-> _Hint:_ Double click on the device in the Navigation tree opens the device's control panel.
-
+_Click on_ attribute, command or pipe opens/hides setting.
+ 
 ![devices_control](images/1.0.x/devices_control.png)
  
  
@@ -288,28 +313,21 @@ Attributes, Commands and Pipes.
 All shown attributes, commands and pipes refer to the selected
 device.
 
-In Device's Controls widget it is also possible to control attributes,
-commands and pipes. 
-
-This Toolbar has the following controls:
-
-* Number – a refresh/execute rate (milliseconds);
-* Refresh button – set a new value of  refresh rate;
-* Pause or Start button – to pause or start refreshing/executing.
+It is also possible to control attributes, commands and pipes in the Device's Controls widget.
 
 #### 2.3.1 Attribute's control
-You can “Read”, “Plot”, “Plot.Hist” and “Write”. 
+Depending on the type of the attribute, it is possible to “Read”, “Plot”, “Plot.Hist” and “Write”. 
 
-* Read – shows info about the attribute;
+* Read – shows value of the selected attribute;
 * Plot – reads the value and plot it. No automatic updates. If you want
-  automatic updates, add attribute to monitor to the Dashboard.
-* Plot.Hist – plots historical values (usually 10). The number can be set in "Configuration tab" of device.
+  automatic updates,use controls presented in the dashboard.
+* Plot.Hist – plots historical values (usually 10). The number can be set in Information panel of device.
 * Write – writes a new value in the attribute. If you change the value
   by writing a new one in the Device's Control Panel, this attribute
-  will be automatically updated in all other tabs and panels;
-* ![icon_eye](images/icon_eye.png) - opens a new tab in the main view with plot depending on the
-  type of an attribute.
+  will be automatically updated in all other tabs and panels.
 
+
+Double click on the attribute will open a plot in the main view.
 
 _Exercise_: 
 ``` 
@@ -322,16 +340,12 @@ click “Plot.Hist”;
 ```
 
 #### 2.3.2 Command's control
-To execute the command, first choose the command you need, then type the input value. 
-
-If there is an “Input” box, it shows what type of input value should be
+To execute the command, first choose the command you need, then type the input value. The “Input” box shows what type of input value should be
 written.
 
-![icon_eye](images/icon_eye.png) - opens a new tab in the main view with input and output fields
-and "Execute" and "Clear all" buttons. 
+Double click on the command opens a tab in the main view.
 
-"Execute" button executes the input value and the result is shown in the
-output.
+"Execute" button executes the input value and the result is shown in the output.
 
 "Clear all" button clears the output field.
 
@@ -354,98 +368,9 @@ device or attribute, command or pipe.
 
 
 
-
 ## 3 Main view
 
-### 3.1 Dashboard tab
-In this tab you can create different scalar dashboards of two types:
-table and plot.
-
-#### 3.1.1 Table dashboard
-*To create a table dashboard* press "+" button to open/close panel. In
-the "Name" field put name of your future dashboard and choose "table" in
-the "Type" drop-down list. Click on save icon
-![icon_save](images/icon_save.png)
-to create this dashboard.
-
-![dashB_table_create](images/dashB_table_create.png)
-
-Drag-n-drop desired attributes from any device to fill dashboard.
-
-![dashB_table_add_attr](images/dashB_table_add_attr.png)
-
-Click on the settings icon in the right bottom corner to show/hide
-settings panel and delete attributes from the table.
-
-![dashB_table_settings](images/dashB_table_settings.png)
-
-When you click on the value of attribute you can change the value either
-in the table or dedicated panel which appears on click.
-
-![dashB_table_change_attr_panel](images/dashB_table_change_attr_panel.png)
-
-In fact this table dashboard has the same purpose as Device monitor,
-except that scalar attributes can be added here manually from different
-devices and you can create several dashboards with different pack of
-attributes.
-
-![TableWidget](images/table_widget.gif)
-
-#### 3.1.2 Plot dashboard
-
-*To create a plot dashboard* click on the "+" icon if the dedicated
-panel is closed. Change or put name of the future dashboard and select
-"plot" type.
-
-![dashB_plot_create](images/dashB_plot_create.png)
-
-Drag-n-drop desired attributes from any device to fill dashboard.
-
-If you want to delete attribute from the plot, click on "settings" button. To start plotting click on "play" ![icon_run](images/icon_run.png)
-icon. If you want change an update rate (in milliseconds), write the needed update rate and press ![icon_update](images/icon_update.png)
-
-![dashB_plot_tab](images/dashB_plot_tab.png)
-
-
-
-
-
-_Exercise_: 
-```
-Open “my_test” in Device tree. 
-Choose “Double Scalar” in Attributes and add it to the newly created Table dashboard. 
-Add “Double Scalar” in Attributes to the newly created Plot table.
-Select attribute “short_image_ro” and add it to monitor. 
-Select “double_spectrum_ro” and add it to Table dashboard. 
-Refresh the page
-```
-
-#### 3.1.3 List dashboard
-
-It has the same purpose as [Device monitor](user_guide.md#52-device-monitor), except that attributes can be added here manually from different devices.
-You can add any attributes from any devices to the List drag-n-droping from Device widget.
-
-![5.1.3_dashboard_list](images/4_dashboard_list.png)
-
-_Exercise_: 
-```
-Open “my_test_device” in Device tree. 
-Choose “Double Scalar” in Attributes and add it to Dashboard using context menu. 
-To plot the scalar attribute click on the plot icon.
-Select attribute “short_image_ro” and add it to monitor using context menu. 
-Select “double_spectrum_ro” and add it to Dashboard using context menu. 
-Refresh the page
-``` 
-
-Plots are powered by plotly.js. Please refer to
-[plotly documentation](https://plot.ly/plotly-js-scientific-d3-charting-library)
-
-To switch between dashboards click on the Profile drop-down list. 
-
-![dashB_switch_between_dashB](images/dashB_switch_between_dashB.png)
-
-
-__NOTE__ _To plot non-scalar attribute double click on it in._
+The main place for control and monitoring. The place where different dashboards, plots, scripts and manager appear.
 
 
 ## 4 Right panel
@@ -457,7 +382,6 @@ By clicking on a repeat button ![icon_repeat](images/1.0.x/icon_repeat.png) the 
 
 On the right bottom corner you will find application's log and find out what's up with your application.
 ![log_icon_errors](images/log_icon_errors.png)
-
 
 
 ## Resources
