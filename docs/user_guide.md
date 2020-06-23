@@ -114,6 +114,9 @@ To see information about the selecter item (host, server or device) or change se
 ### 1.2 User's log out
 Use this for correct end of session and to prevent others from changing your settings and managing your hosts and devices.
 
+### 1.3 Help
+
+This will navigate to the documentation and GitHub page of the Waltz project.
 
 
 
@@ -138,12 +141,12 @@ It is the place where table, plot or list dashboard can be created.
 
 Create a dashboard by clicking on “+”, choose the type (table, list or plot) and put the name. Make sure to hit V button, thus, save the newly created dashboard. Choose device from the Navigation tree and open devices control panel (also possible to open it by double clicking on the device in the tree). Drag-n-drop desired attributes form one/different devices to the dashboard to monitor.
 
-_Table_ – the first column is filled with unique devices’ names, other columns have attribute names as headers. Drag-n-drop an attribute form different devices if needed and it will add a new column to the table if there is no column with such attribute’s name and add new line if there has been no such device in the table yet.
+__Table__ – the first column is filled with unique devices’ names, other columns have attribute names as headers. Drag-n-drop an attribute form different devices if needed and it will add a new column to the table if there is no column with such attribute’s name and add new line if there has been no such device in the table yet.
 Use control underneath the table (hit “gear” button to show/hide it) to delete the column or freeze the table to avoid changes.
 
-_List_ – a list of attributes form one/different devices to monitor. Drag-n-drop attribute to add to the list table. It has fixed number of columns which can be hidden/shown (hit “gear” button underneath the table for these settings).
+__List__ – a list of attributes form one/different devices to monitor. Drag-n-drop attribute to add to the list table. It has fixed number of columns which can be hidden/shown (hit “gear” button underneath the table for these settings).
 
-_Plot_ – dashboard where different attributes from one/different devices can be plotted together. If you want to delete an attribute – use control (“gear” button).
+__Plot__ – dashboard where different attributes from one/different devices can be plotted together. If you want to delete an attribute – use control (“gear” button).
 
 To start updating attribute’s values – hit “arrow” button.
 
@@ -244,39 +247,32 @@ Devices: sys/tg_test/x;  sys/tg_test/y
 
 
 
-
 ### 2.3 Device's Control
 
-As soon as a device in the Devises' tree is chosen the device's control
-widget is updated.
- 
-> _Hint:_ Double click on the device in the Devices tree opens the device's control widget.
-
-![left_panel_devices_widget](images/left_panel_devices_widget.png)
+Choose the device from the navigation tree and see all device’s attributes, commands and pipes in this panel.
 
 Here you can:
  
 - See device's attributes, commands and pipes;
-- Drag-n-drop Attributes to the Dashboard;
+- Drag-n-drop Attributes to the Dashboards;
 - Click on attribute or command or pipe to select it for editing;
-- Double click on attribute or command or pipe to expand description
-  widget;
-- Search in Search box which filters all three device child entity types
-  simultaneously. __a:__ shows only attributes; __c:__ -- commands; __p:__ -- pipes.
-  
+- Double click on attribute or command or pipe to expand Information panel;
+- Use seach box.
+ 
+ __Filter__ will help to find the necessary one. Drop down list with special symbols (“a:” - for attribute; “c:” - for command; “p:” - for pipes) will help to search only in the selected category and hide others (e.g. in case of “a:” - command and pipes will be hidden and the filter will the applied for attributes only).
+ 
+> _Hint:_ Double click on the device in the Navigation tree opens the device's control panel.
+
+![devices_control](images/1.0.x/devices_control.png)
+ 
+ 
+ 
 ![Device panel filter](images/device_ctrl_filter.gif)  
 
 __NOTE__ _If you get the following error, this means that Tango device is not exported:_
 
 > Reason: TangoProxyException Description: Failed to get proxy for tango://hzgxenvtest.desy.de:10000/development/camel/0:ProxyException in Failed to apply creation policy for proxy development/camel/0 PANIC: TangoApi_DEVICE_NOT_EXPORTED development/camel/0 Not Exported ! Connection(development/camel/0) ERR: TangoApi_CANNOT_IMPORT_DEVICE Cannot import development/camel/0 Connection.build_connection(development/camel/0)[Failed to apply creation policy for proxy development/camel/0:TangoApi_DEVICE_NOT_EXPORTED[development/camel/0 Not Exported !]] Origin: org.tango.web.server.TangoProxyPool.getProxy(TangoProxyPool.java:74)
  
-
-Drag-n-drop an attribute to add it to the dashboard tab in the main view.
-
-![left_panel_drag-n-drop](images/left_panel_drag-n-drop_new_DashB.png)
-
-__NOTE__ _The difference between “Dashboard” and “Monitor tab” is that you can add any attribute of ANY device to the Dashboard, whereas in
-the “Monitor tab” you see all the attributes of one selected device._
 
 
 _Exercise_: 
@@ -286,20 +282,15 @@ this also selects it in the Device control panel.
 ```
 
 To work with the Device's Control Panel you should select the device in
-Devices tree widget first. Name of the selected device is shown above
+Navigation tree first. Name of the selected device is shown above
 Attributes, Commands and Pipes.
 
 All shown attributes, commands and pipes refer to the selected
 device.
 
 In Device's Controls widget it is also possible to control attributes,
-commands and pipes. All controls widgets have: 
+commands and pipes. 
 
-- ![icon_eye](images/icon_eye.png)
-  \- opens **description** of the chosen item;
-- ![icon_info](images/icon_info.png) - opens a new tab with **toolbar** in the main view with
-   functionality corresponding to the selectied item (attribute, command or pipe). 
-   
 This Toolbar has the following controls:
 
 * Number – a refresh/execute rate (milliseconds);
