@@ -61,7 +61,7 @@ You can write and execute javascript here.
 
 ![scripting](images/1.0.x/scripting.png)
 
-_“Scripts” - list of javascript files you have. 
+_“Scripts”_ - list of javascript files you have. 
 
 If you want to create a new javascript file, type the name of your future file in _“Script name” field_ and your code in _“Script code”_ box. When click on run button ![icon_run](images/1.0.x/icon_run.png) in the left bottom your script is automatically saved but you must fill _Script name_ first! No need to click on save button ![icon_save](images/1.0.x/icon_save.png) in this case.
 
@@ -90,10 +90,10 @@ Press “ctrl+enter” to execute the script
 
 #### 1.1.2 Manager
 
-![tab_manager](images/tab_manager.png)
+![tab_manager](images/1.0.x/manager.png)
 
 Manager tab was created to make it possible to have an overview of all
-Tango Hosts and Tango Servers (under *Tango Severs*). To make Tango
+Hosts and Servers. To make
 Servers appear, click on Tango Host in the tree from the left panel or
 on Tango Host above *Tango Severs* label.
 
@@ -106,12 +106,10 @@ of Tango Server. It is also possible to add, update or delete device
 using a dedicated box right under the "Tango Devices" label. Place
 holders in fields will help you to add a new device in correct way.
 
-*Selected Device info* shows information on the device. It
-updates on click. You may also choose device from the Tango device tree
-in the left panel to see information about it in this table.
-
-*Manager's Log* provides list of user's actions with servers showing
+*Starter's Log* provides list of user's actions with servers showing
 date, time and action.
+
+To see information about the selecter item (host, server or device) or change settings of the selected item, click on a dedicated tab with ![icon_info](images/1.0.x/icon_info.png) sign on the left panel. 
 
 ### 1.2 User's log out
 Use this for correct end of session and to prevent others from changing your settings and managing your hosts and devices.
@@ -130,7 +128,7 @@ Consists of the following main parts:
 
 4. Information and settings block.
 
-This panel can be added with the needed tabs for quich navigation. For example, when the Scripting is opened - a dedicated tab appeared in this panel.
+This panel can be added with the needed tabs for quick navigation. For example, when the Scripting is opened - a dedicated tab is appeared in this panel.
 
 
 ### 2.1 Dashboard profiles
