@@ -132,6 +132,23 @@ This panel can be added with the needed tabs for quick navigation. For example, 
 
 
 ### 2.1 Dashboard profiles
+It is the place where table, plot or list dashboard can be created.
+
+![dashboard](images/1.0.x/dashboard.png)
+
+Create a dashboard by clicking on “+”, choose the type (table, list or plot) and put the name. Make sure to hit V button, thus, save the newly created dashboard. Choose device from the Navigation tree and open devices control panel (also possible to open it by double clicking on the device in the tree). Drag-n-drop desired attributes form one/different devices to the dashboard to monitor.
+
+_Table_ – the first column is filled with unique devices’ names, other columns have attribute names as headers. Drag-n-drop an attribute form different devices if needed and it will add a new column to the table if there is no column with such attribute’s name and add new line if there has been no such device in the table yet.
+Use control underneath the table (hit “gear” button to show/hide it) to delete the column or freeze the table to avoid changes.
+
+_List_ – a list of attributes form one/different devices to monitor. Drag-n-drop attribute to add to the list table. It has fixed number of columns which can be hidden/shown (hit “gear” button underneath the table for these settings).
+
+_Plot_ – dashboard where different attributes from one/different devices can be plotted together. If you want to delete an attribute – use control (“gear” button).
+
+To start updating attribute’s values – hit “arrow” button.
+
+To delete a dashboard – choose it and hit “basket” button.
+
 
 
 ### 2.2 Navigation Tree
