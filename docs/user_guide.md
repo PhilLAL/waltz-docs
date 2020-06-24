@@ -361,10 +361,16 @@ will be opened. In this new tab it is possible to write a new value as
 
 
 ### 2.4 Information and settings block
-Contains read-only information. Been automatically updated when click on the name of Tango host (values are loaded from the REST server),
+Contains information and setting for attributes. They are automatically updated when click on the name of Tango host (values are loaded from the REST server),
 device or attribute, command or pipe.
 
-![left_panel_description](images/left_panel_description.png)
+
+Items of the Information panel:
+![info_panel](images/1.0.x/info_panel.png)
+
+
+Expanded items of the Information panel:
+![info_panel_expanded](images/1.0.x/info_panel_expanded.png)
 
 
 
