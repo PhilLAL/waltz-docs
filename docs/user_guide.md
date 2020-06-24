@@ -366,10 +366,12 @@ device or attribute, command or pipe.
 
 
 Items of the Information panel:
+
 ![info_panel](images/1.0.x/info_panel.png)
 
 
 Expanded items of the Information panel:
+
 ![info_panel_expanded](images/1.0.x/info_panel_expanded.png)
 
 
