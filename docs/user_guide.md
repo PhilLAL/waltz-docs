@@ -423,7 +423,6 @@ It is possible to do in the Info Control panel but first you should select an at
 ### execute a command?
 Double click on the device in the Navigation Tree to open the Device’s Control tab with the list of commands. Find the command (filter on the top of the tab may help) you need and execute it. Type arguments if necessary.
 
-
 ### set an alias to have a quick access to the device(s)?
 It is possible to do in the Info Control panel but first you should select the device in the Navigation Tree tab.
 
@@ -431,9 +430,13 @@ It is possible to do in the Info Control panel but first you should select the d
 All actions are registered in the users’ log tab on the left side panel. If you want to repeat an action, click on the “arrow” button near the action.
 
 ### add a new host?
-Open the Navigation Tree tab and click on the “+” button. Put host's name and its port. Add this information to the Navigation Tree by clicking on the “+” near the input box.
+In the Navigation Tree tab click on the “+” button to open settings bar. Put host's name and its port. Add this information to the Navigation Tree by clicking on the “+” near the input box.
 
-### add/delete device to/from the database?
+### delete host?
+In the Navigation Tree tab click on the “+” button to open settings bar. Click on the "-" button near the host you want to delete.
+
+### add device to the database?
+Please, refer to the part _2.2.1.4 Tango Server Wizard_ of this User Guide.
 
 ### get information about the host?
 Open the Navigation Tree tab, select the needed host and then either click on “i” button under the tree or click on the Info Control panel.
