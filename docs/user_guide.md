@@ -3,15 +3,14 @@
 [TOC]
 
 ***
-
-Before deepening into Waltz , please, note a list of very simple
-actions. 
-
-They really worth doing while using web-applications: 
+__Before deepening into Waltz, please, note a list of very simple
+actions that really worth doing while using web-applications: 
 
 - _Redo last actions_
 - _Refresh the page_
 - _Refresh the page with cache drop (CTRL+F5)_
+
+
 
 ***
 
