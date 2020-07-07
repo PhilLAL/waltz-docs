@@ -405,7 +405,7 @@ On the right bottom corner you will find application's log and find out what's u
   - Find and click on the device (in Navigation Tree tab) from which you want to monitor or update the attributes.
   - Double click on the device to open a list of attributes or just select the tab underneath the Navigation Tree tab. Drag-n-drop the desired attributes to the dashboard.
   
-### have several sets of attributes according to their my needs for better monitoring and control?
+### have several sets of attributes according to my needs for better monitoring and control?
 It is possible to create several dashboards (table, list, plot) and drag-n-drop attributes form different devices.
 
 ### get a scalar, spectrum or image view?
