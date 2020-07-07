@@ -398,6 +398,47 @@ On the right bottom corner you will find application's log and find out what's u
 
 
 
+# How to
 
+### create a table with attributes from different devices to monitor or set new values?
+  - Open dashboard profiles tab and click on “+” button in the bottom. Set the name and select “table” view, then click on “V” button to create a new table dashboard. 
+  - Find and click on the device (in Navigation Tree tab) from which you want to monitor or update the attributes.
+  - Double click on the device to open a list of attributes or just select the tab underneath the Navigation Tree tab. Drag-n-drop the desired attributes to the dashboard.
+  
+### have several sets of attributes according to their my needs for better monitoring and control?
+It is possible to create several dashboards (table, list, plot) and drag-n-drop attributes form different devices.
+
+### get a scalar, spectrum or image view?
+Double click on the device in the Navigation Tree to open the Device’s Control tab with all its attributes. Double click on the attribute to plot it. Depending on the type of attribute it will be scalar, spectrum or image.
+
+### find the device?
+There are 2 ways to find the device. The easiest way is to the Navigation Tree tab and start to type the name in the filter which is on the top of this tab. Another way is to use more complicated filter. There is a special “bottleneck” button on the bottom of the Navigation Tree tab. Using it you can define host being available after filtering.
+
+### find the attribute?
+Select the device from which you need the attribute in the Navigation Tree tab and double click on it to open the Device’s Control tab with attributes. Scroll the list of attributes or start to type in the filter box of the Device’s Control.
+
+### set alarms to the attributes of the device(s)?
+It is possible to do in the Info Control panel but first you should select an attribute of the device.
+
+### execute a command?
+Double click on the device in the Navigation Tree to open the Device’s Control tab with the list of commands. Find the command (filter on the top of the tab may help) you need and execute it. Type arguments if necessary.
+
+
+### set an alias to have a quick access to the device(s)?
+It is possible to do in the Info Control panel but first you should select the device in the Navigation Tree tab.
+
+### quickly repeat an action?
+All actions are registered in the users’ log tab on the left side panel. If you want to repeat an action, click on the “arrow” button near the action.
+
+### add a new host?
+Open the Navigation Tree tab and click on the “+” button. Put host's name and its port. Add this information to the Navigation Tree by clicking on the “+” near the input box.
+
+### add/delete device to/from the database?
+
+### get information about the host?
+Open the Navigation Tree tab, select the needed host and then either click on “i” button under the tree or click on the Info Control panel.
+
+### get more information about the application? 
+There is a “?” item in the upper menu with “About”, “User docs”, “New issue” subitems.
 
 
