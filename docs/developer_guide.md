@@ -158,6 +158,16 @@ Deployment should be done by system administrators. Below you can see how it was
 ![deployment_ESRF](images/deployment_ESRF.png)
 ![deployment_DESY](images/deployment_DESY.png)
 
+### other required backends
+
+For Waltz to be fully functional the following backends must be deployed:
+
+- [UserContext](https://github.com/waltz-controls/user-context) 
+
+- [Magix](https://github.com/waltz-controls/magix-war-plugin)
+
+These backends are distibuted as .war files and hence must be deployed together with TangoRestServer to a JavaEE server (Apache Tomcat). 
+
 ## Packaging and deployment
 
 Waltz uses Webpack to build a .war file distribution:
