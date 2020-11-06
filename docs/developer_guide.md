@@ -30,7 +30,7 @@ It uses structured requests:
 * http://{host}/{app}/{api}/{version}/{collection}/{item} e.g. http://localhost:8080/my-app/users/123
 * http://{host}/{app}/{api}/{version}/{collection}/{item}/{sub-collection}
 
-It adds semantic to HTTP methods:
+It adds semantic to HTTP methods
 * GET → get resource
 * POST → create new resource
 * PUT → update resource
@@ -140,12 +140,12 @@ A high level overview is presented in C&C diagrams.
 
 Pipeline of the mTangoREST.server request can be presented like this:
 ![mTangoREST.server_request_pipeline](images/mTangoREST.server_request_pipeline.png)
-Where 
-* org.tango.web.server.filters; 
+Where
+* * org.tango.web.server.filters; 
 
-** org.tango.web.server.providers;
+* ** org.tango.web.server.providers;
 
-*** org.tango.web.server.resolvers, org.tango.web.server.interceptors.
+* *** org.tango.web.server.resolvers, org.tango.web.server.interceptors.
 
 Tango JAX-RS resources - Tango entities (aka device, attribute, commands etc) in mTangoREST.server.
 The examples of code structure and Device class are below:
